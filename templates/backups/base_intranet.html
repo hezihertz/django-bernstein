@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block side_nav %}
+<div class="large-3 medium-4 columns">
+	<div class="sidebar">
+		<dl class="accordion">
+			<dd><a href="/intranet/contact_list/">Contact List</a></dd>
+			<dd><a href="/intranet/departure_check_list/">Departure Check List</a></dd>
+			<dd><a href="/intranet/equipment_responsibility_list/">Lab Equipment Responsibility List</a></dd>
+			<dd><a href="/intranet/printer_setup/">Printer Setup Instructions</a></dd>
+			<dd><a href="/intranet/odyssey_faq/">Odyssey FAQ</a></dd>
+			<dd><a href="/media/intranet/objective_inventory.xls">Objective Inventory</a></dd>
+			<dd><a href="/media/intranet/Xie_Group_Bacterial_Strain_Stock_Database.xls">Bacterial Strain Stock Database</a></dd>
+		</dl>
+	</div>
+</div>
+{% endblock %}
+
+{% block base_content %}
+<div class="large-9 medium-8 columns article-content" role="content">
+{% block intranet_content %}{% endblock %}
+</div>
+{% endblock %}

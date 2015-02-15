@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+
+{% block sub_tags %}
+	<ul id="sticky-nav" class="sub-nav">
+		<li><a href="#why_crs">Why Coherent Raman Imaging</a></li>
+		<li><a href="#cars">CARS Microscopy</a></li>
+		<li><a href="#srs">Stimulated Raman Scattering</a></li>
+		<li><a href="#laser_sources">Laser Sources</a></li>
+		<li><a href="#applications">Applications of CRS Imaging</a></li>
+	</ul>
+{% endblock %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+		<p><a name="why_crs"></a></p>
+		<p><h3 id="why_crs">Why Coherent Raman Imaging</h3></p>
+		<p>Optical microscopy is unique among current imaging modalities in its ability to probe living specimens with subcellular resolution, enabling the visualization of morphological details in tissue and cells on the scale of a few hundred nanometers. The discovery and broad application of genetically encoded fluorophores, such as GFP and YFP, to tag specific proteins has had a considerable impact on modern microscopy. Additionally, fluorescence microscopy has superb sensitivity (see single molecule section). Labeling and staining may, however, perturb the studied system. This is especially true for small molecules, such as metabolites and drugs, for which the attachment of &lsquo;big&rsquo; labels can change the biological function.</p>
+		<p>Raman microscopy is an alternative technique that enables label-free chemical imaging. It is based on the Raman scattering effect of molecules that was discovered by Indian scientist C.V. Raman in the early 1930s. When light is shined on a molecule, it can be inelastically scattered and gives off light at lower energy. All molecules have specific Raman signatures typically spanning from 100 cm<sup>-1</sup> to 3500 cm<sup>-1</sup>. Figure 1 shows an example of the Raman spectrum of a biological cell. The Raman spectrum is highly dependent on the chemical structure, but almost unaffected by the local environment, of the molecule. Therefore, it is not only specific, but also quantitative.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Raman_Spec.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 1. </strong>Typical Raman spectrum of a biological cell [1]</p>
+		</blockquote>
+		<p>However, spontaneous Raman scattering (Fig. 2a) is typically very weak, and as a result, imaging based on spontaneous Raman is extremely slow. Coherent Raman imaging, including stimulated Raman scattering (SRS) and coherent anti-Stokes Raman scattering (CARS), shown in Fig. 2b and 2c, respectively, allows the enhancement of the weak Raman signal by means of nonlinear excitation, enabling imaging to speed up to video-rate.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SRS_CARS_diag.jpg" ></div>
+		<blockquote>
+			<p><strong>Fig. 2. </strong>Energy diagrams of Raman interactions: a) Spontaneous Raman scattering microscopy. Pump-field is inelastically scattered off molecular vibrations of the sample, generating new, red-shifted field components at the Stokes frequencies &omega;<sub>s </sub>= &omega;<sub>p </sub>- &Omega;. b) Stimulated Raman Scattering (SRS) microscopy. Both pump- and Stokes-frequencies are incident on the sample. If the frequency difference &Delta;&omega; = &omega;<sub>p</sub> - &omega;<sub>S</sub> matches a molecular vibration of the sample &Omega;, stimulated excitation of vibration transitions occurs. The intensity of the pump-field experiences a loss (SRL) and the Stokes-field a gain (SRG). c) Coherent anti-Stokes Raman Scattering (CARS) microscopy is a four-wave mixing process generating a new field at the anti-Stokes frequency &omega;<sub>as</sub> = 2&omega;<sub>p</sub>- &omega;<sub>s</sub>. When energy difference D<sub>w</sub> matches a molecular vibration of the sample, the scattering process is resonantly enhanced.</p>
+		</blockquote>
+		<blockquote>
+			<p>Vibrational spectra of biological specimens contain a multitude of molecular signatures that can be used for identifying biochemical constituents in tissue. Infrared absorption (FT-IR) microscopy is limited by low spatial resolution due to the long wavelength of infrared light and low penetration depth into biological specimens due to strong water absorption. Spontaneous Raman scattering (Fig. 2a), overcoming the problems associated with the long excitation wavelengths, lacks the sensitivity required for rapid imaging. Stimulated Raman Scattering (SRS) and Coherent anti-Stokes Raman Scattering (CARS), shown in Fig. 2b and 2c, respectively, allow the enhancement of the weak Raman signal by means of nonlinear excitation, enabling imaging to speed up to video-rate.</p>
+		</blockquote>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/in_out_spectra.png" /></div>
+		<blockquote>
+			<p><strong>Fig. 3.</strong> Input and output spectra of SRS and CARS</p>
+		</blockquote>
+		<p>SRS leads to an intensity increase in the Stokes beam (SRG) and an intensity decrease in the pump beam (SRL). Also shown (not to scale) is the CARS signal generated at the anti-Stokes frequency. Coherent Raman imaging provides chemically-specific contrast without any preparation or labeling. Figure 4 shows an example of mouse skin imaging using SRS. For the acquisition of this image stack in mouse ear, SRL image contrast was tuned into the CH<sub>2</sub>-stretching vibration. As such, lipid rich structures of the skin were highlighted. From top (beginning of the movie) to bottom (end of the movie):</p>
+		<ul>
+			<li>Polygonal intercellular space of the stratum corneum</li>
+			<li>Viable epidermis with hair follicle</li>
+			<li>Sebaceous gland</li>
+		</ul>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Skin_low.gif" ></div>
+		<blockquote>
+			<p><strong>Fig. 4. </strong>SRS tissue imaging of fresh mouse skin</p>
+		</blockquote>
+
+		<p><h5 class="subheader">Why Coherent Raman Imaging?</h5></p>
+		<ul>
+			<li>Intrinsic vibrational contrast, circumventing the need for extrinsic labels.</li>
+			<li>Stimulated excitation of vibrational transitions in SRS and coherent signal accumulation in CARS produces a strong directional signal, making Coherent Raman Imaging much more sensitive than conventional vibrational microscopy. Consequently, CARS and SRS require only moderately average powers that are easily tolerable by living biological samples. </li>
+			<li>The nonlinear SRS and CARS signals are generated only at the focus where the excitation intensities are the highest. This leads to 3D sectioning capability, which is essential for imaging tissues or cell structures.</li>
+			<li>SRS is amplified by heterodyning in the excitation fields and CARS is emitted at higher frequency than one-photon fluorescence, allowing detected SRS and CARS presence in a strong fluorescent background.</li>
+			<li>There is little scattering of the near-infrared excitation beams, allowing deep penetration in tissues and significant reduction of photodamage in biological samples.</li>
+		</ul>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Thomas, George J. Jr. &quot;<a href="{{MEDIA_URL}}research/annurev.biophys.28.1.1.pdf">Raman spectroscopy of protein and nucleic acid assemblies</a>&quot; <em>Annu. Rev. Biophys. Biomol. Struct. </em>28:1-27 (1999)</li>
+		</ol>
+
+		<hr>
+		<p><a name="cars"></a></p>
+		<p><h3 id="cars">Coherent Anti-Stokes Raman Scattering (CARS)</h3></p>
+		<p>CARS is a four-wave mixing process in which a pump beam at frequency &omega;<sub>p</sub> and a Stokes beam at frequency &omega;<sub>s</sub> interact with a sample to generate an anti-Stokes signal at frequency &omega;<sub>as</sub> = 2&omega;<sub>p</sub> - &omega;<sub>S</sub> . When the beat frequency between the pump and Stokes &Delta;&omega; matches the frequency of a particular Raman active molecular vibration &Omega;, the resonant oscillators are coherently driven. This generates a nonlinear polarization of the sample that radiates the anti-Stokes signal. Because the radiation is emitted coherently, the CARS signal is strongly enhanced compared to the spontaneous Raman scattering signal, for which Stokes and anti-Stokes photons are emitted incoherently.</p>
+		<p>In contrast to SRS, CARS is a parametric process, i.e., no energy is transferred into the sample but the difference energy between the pump- and Stokes-photon is carried away by the anti-Stokes field. As a result, CARS can also occur when there are no resonant molecules in the focal volumes. This gives rise to a nonresonant background that can limit the sensitivity and alter the CARS spectra from spontaneous Raman spectra. We developed several detection schemes for CARS microscopy to overcome this background.</p>
+		<p><h5 class="subheader">Detection Schemes for CARS:</h5></p>
+		<ul>
+			<li><a href="{{MEDIA_URL}}research/andreas_prl_1999.pdf">Forward CARS (F-CARS)</a></li>
+			<p>The signal is detected in the phase-matched direction and the signal is selected by a set of spectral filters. The F-CARS signals are generally very strong and can sometimes be observed by the naked eye.</p>
+			<li><a href="{{MEDIA_URL}}research/andreas_prl_2001.pdf">Epi CARS (E-CARS)</a></li>
+			<p>The forward CARS signal is accompanied by a strong nonresonant background which may overshadow weak signals that are of interest. When detected in the backward direction, the nonresonant signal from the solvent (water) is completely eliminated. E-CARS is particularly sensitive to objects in focus that are smaller than the optical wavelength. When the sample is highly scattering, the forward propagating CARS signal can be backscattered, giving rise to a strong epi-signal.</p>
+			<div class="text-center"><img src="{{MEDIA_URL}}research/Epi-tech.jpg"></div>
+			<blockquote>
+				<p>CARS tissue image of small adipocytes of the subcutaneous layer from mouse ear tissue. The image was taken at a Raman shift of 2845 cm<sup>-1</sup> to address the CH<sub>2</sub> stretching frequency.</p>
+			</blockquote>
+			<li><a href="{{MEDIA_URL}}research/jixin_opl_2001b.pdf">Polarization sensitive CARS (P-CARS)</a></li>
+			<p>By taking advantage of the Raman depolarization ratio of certain modes, the resonant signal can be separated from the nonresonant background when polarization sensitive detection is employed. P-CARS significantly enhances the image quality by eliminating the nonresonant background completely. </p>
+			<li><a href="{{MEDIA_URL}}research/andreas_apl_2002.pdf">Time-resolved CARS</a></li>
+			<p>By employing a femtosecond time-scale delay between the excitation and probe pulses, time-resolved CARS allows for the complete suppression of nonresonant signals.</p>
+			<li><a href="{{MEDIA_URL}}research/eric_conor_opl_2006.pdf">Interferometric CARS (iCARS) </a></li>
+			<p>By interfering with the CARS signal from a sample with a local oscillator CARS signal it is possible to selectively image the real and imaginary part of the third-order nonlinear susceptibility. iCARS enables rapid, amplified Raman imaging that is free of the nonresonant background. </p>
+		</ul>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/iCARS_Techpage.jpg" ></div>
+		<blockquote>
+			<p>Comparison of heterodyne CARS with non-interferometric CARS imaging of live NIH 3T3 cells. The non-interferometric image of the cell in (a) is taken at the peak of the symmetric CH<sub>2</sub> vibration (2845 cm<sup>-1</sup>), with the measured imaginary and real response given in (b) and (c), respectively. The non-interferometric image of the cell in (d) is taken on the blue side of the CH-stretching band at 2950 cm<sup>-1</sup>, with the isolated imaginary and real response shown in (e) and (f), respectively. Figures (g), (h), and (i) represent the non-interferometric, imaginary response and real response images off-resonance at 2086 cm<sup>-1</sup>, respectively. Image dimensions are 35 x 40 &mu;m<sup>2</sup>.</p>
+		</blockquote>
+
+		<p><h5 class="subheader">CARS Microspectroscopy Techniques:</h5></p>
+		<p>In addition to imaging, CARS spectroscopy can be carried out with the microscope. We have developed the following tools: </p>
+		<ul>
+			<li><a href="{{MEDIA_URL}}research/jixin_jpcb_2002.pdf">Multiplex CARS (M-CARS)</a> </li>
+			<p>A picosecond laser is combined with a femtosecond laser to cover a broad range of vibrational frequencies. The CARS signal is collected and analyzed on a spectrometer. Chemical details in microscopic volumes can be quickly characterized with this method. </p>
+			<li><a href="{{MEDIA_URL}}research/jixin_jpca_2002.pdf">CARS correlation spectroscopy (CARS-CS)</a> </li>
+			<p>Analogous to fluorescence correlation spectroscopy, the autocorrelation of time-resolved CARS signals reflects rapid diffusion dynamics of small Raman scatterers in focus without the need for labeling. </p>
+			<li><a href="{{MEDIA_URL}}research/OpticsLettersVol29Num24Dec152004.pdf">Interferometric CARS microspectroscopy</a></li>
+			<p>Essentially a combination of interferometric CARS microscopy and multiplex CARS, interferometric CARS microspectroscopy enables detection of the real and imaginary components of the CARS signal.</p>
+
+		<hr>
+		<p><a name="srs"></a></p>
+		<p><h3 id="srs">Stimulated Raman Scattering (SRS)</h3></p>
+		<p>In spontaneous Raman scattering, only one laser beam at a frequency &omega;<sub>p</sub> illuminates the sample and the signal is generated at the Stokes and anti-Stokes frequencies, &omega;<sub>s</sub> and &omega;<sub>as</sub>, respectively, due to inelastic scattering. In SRS, however, two laser beams at &omega;<sub>p</sub> and &omega;<sub>S</sub> coincide on the sample.&nbsp;When the difference frequency &Delta;&omega;=&omega;<sub>p</sub>-&omega;<sub>S</sub> (also called the Raman shift), matches a particular molecular vibrational frequency &Omega;, amplification of the Raman signal is achieved by virtue of stimulated excitation of molecular transition rate r. r ~ &sigma;<sub>Raman</sub>&middot;n<sub>p</sub>&middot;(n<sub>S</sub>+1)&nbsp;. &sigma;<sub>Raman</sub> is the (Raman-shift dependent) Raman scattering cross-section of the molecule and np and n<sub>S</sub> are the number of photons per mode in the pump and Stokes fields, respectively. In the absence of the Stokes-beam (n<sub>S</sub>=0), the unity in the equation above accounts for spontaneous Raman scattering. Under our typical excitation condition n<sub>S</sub> is, however,&nbsp;bigger than 10<sup>7</sup>; hence, stimulated Raman scattering provides amplification at the vibrational transition rate. As a consequence of the amplified energy transition rate, the intensity of the Stokes beam, I<sub>S</sub>, experiences a gain, &Delta;I<sub>S</sub>, (stimulated Raman gain, SRG) and the intensity of the pump beam, Ip, experiences a loss, &Delta;I<sub>p</sub>, (stimulated Raman loss, SRL). Either &Delta;I<sub>S</sub> or &Delta;I<sub>p</sub> can be used as vibrational contrast for SRG and SRL microscopy, respectively. </p>
+		<p>SRS cannot occur when &Delta;&omega; does not match any vibrational resonance that absorbs the difference energy from the fields. Thus, SRS does not have a nonresonant background signal. The intensity of SRG or SRL is described by &Delta;I<sub>S</sub> ~ N &middot; &sigma;Raman&middot; Ip&middot; IS&nbsp;and &Delta;I<sub>p</sub> ~ - N &middot; &sigma;Raman&middot; Ip&middot; IS , where N is the number of molecules in the probe volume. As in two-photon microscopy, the nonlinearity of SRS in the overall excitation intensity is the basis for 3D sectioning, which allows for point-by-point three-dimensional imaging of thick specimens. </p>
+		<p>In contrast to the CARS signal that is generated at the anti-Stokes frequency, SRG and SRL occur at the frequency of the excitation beams. Although the Raman signal is greatly enhanced, SRL and SRG are relativity small compared to the intensity of the excitation beams (&Delta;I<sub>p</sub>/I<sub>p</sub> and &Delta;I<sub>S</sub>/I<sub>S</sub> &lt;10<sup>-4</sup>) under biocompatible illumination conditions and are thus buried in the laser noise. Realizing that laser noise occurs primarily at low frequencies, a high-frequency phase-sensitive detection scheme is critical. As shown in Fig.1, one can modulate the intensity of the Stokes beam (&gt;1MHz) and detect the resulting intensity modulation of the pump beam due to SRL at the same frequency with a lock-in amplifier. The lock-in amplifier signal can be directly fed into the D/A-converter of the microscope. Similarly, SRG can be measured by modulating the pump beam and detecting the Stokes beam. The high intensity laser light can best be detected with a large-area photodiode with high reverse bias voltage to allow the time-response needed from MHz-modulation. With this approach, &Delta;I<sub>p</sub>/I<sub>p</sub> as small as 10<sup>-8</sup> can be achieved with a 1s time constant. This is close to the shot-noise-limit. </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SRSmodualtionScheme.jpg"></div>
+		<blockquote>
+			<p><strong>Fig.1: Modulation scheme for SRL microscopy.</strong> In order to detect the relatively small signal from the background of excitation laser beams, the SRS signal must be modulated faster than the laser noise (MHz). To detect SRL, the Stokes-beam can be modulated with an acusto-optic modulator.&nbsp; The SRL signal can be extracted from the detected intensity of the pump intensity with a lock-in amplifier. </p>
+		</blockquote>
+		<p>We detected SRL instead of SRG because the responsivity of the photodiode used is higher for the pump than for the Stokes beam. Collinear pump- and Stokes-beams are focused with a high numerical aperture objective onto a common focal spot (Fig.2). To detect the pump- or Stokes-beams in the forward direction, we recommend using a condenser with a numerical aperture higher than that of the excitation objective, in order to minimize unwanted background due to cross-phase-modulation, which may yield a spurious background.</p>
+		<p>Epi (backward) detection is possible in turbid samples because multiple scattering events redirect a significant portion of the forward propagating pump and Stokes beams to the backward direction, which can be collected with the same excitation objective lens. The excitation light is separated from the detection light with a polarizing beam splitter and quarter-waveplate in a double-pass geometry.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SRS_setup.png"></div>
+		<blockquote>
+			<p><strong>Fig.2: SRL microscopy setup.</strong> Stokes beam is provided by a 1064nm pulsed lasers and the pump beam by a synchronously pumped optical parametric oscillator. The intensity of the Stokes beam is modulated with an acusto-optic modulator at radio-frequency. Pump- and Stokes beams are overlapped in time and space and aligned into a state-of-the-art lase&ndash;scanning microscope. In forward and epi-direction, the Stokes beam is blocked with a filter and the pump beam detected with a large-area photodiode (PD). The SRL signal is extracted with a lock-in amplifier that detects at the same frequency of the modulation of the Stokes beam.</p>
+		</blockquote>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Skin_low.gif"></div>
+		<blockquote>
+			<p><strong>Fig.3: SRS tissue imaging of fresh mouse skin.</strong> For the acquisition of this image stack in mouse ear, SRL image contrast was tuned into the CH<sub>2</sub>-stretching vibration. As such, lipid rich structures of the skin were highlighted. From top (beginning of the movie) to bottom (end of the movie):</p>
+			<ul>
+				<li>Polygonal intercellular space of the stratum corneum</li>
+				<li>Viable epidermis with hair follicle</li>
+				<li>Sebaceous gland</li>
+			</ul>
+			<p>The image stack was taken on fresh tissue, without any preparation or labeling.</p>
+		</blockquote>
+
+		<hr>
+		<p><a name="laser_sources"></a></p>
+		<p><h3 id="laser_sources">Laser Sources</h3></p>
+		<p><h5 class="subheader">Light Sources for CARS Microscopy: Continuous Evolution</h5></p>
+		<p>Past advances in CARS microscopy have been possible due to the constant improvement in ultrafast laser sources. This development continues today, to push CARS technology to the next level, and thus fulfill the demands of emerging applications in cellular biology and biomedical science.</p>
+		<p><h5 class="subheader">PAST:</h5></p>
+		<p>Two tightly synchronized Mode-locked Ti:Sapphire lasers</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/TwinTiSaphi.jpg"></div>
+		<br>
+		<ul class="small-block-grid-2">
+			<li>
+				<div class="text-center"><p>PROS:</p></div>
+				<ul>
+					<li>High spectral resolution (1-3 cm<sup>-1 </sup>for 5 ps pulse) </li>
+					<li>Broad Tunability (500-3500cm<sup>-1</sup>) </li>
+				</ul>
+			</li>
+			<li>
+				<div class="text-center"><p>ROOM FOR IMPROVEMENT:</p></div>
+				<ul>
+					<li>Timing jitter limits the ultimate performance </li>
+					<li>Complex: two laser sources </li>
+					<li>The system has short operation wavelengths in the IR (690-1080 nm). Longer operation wavelengths are desired to increase the penetration depth and reduce photodamage. </li>
+				</ul>
+			</li>
+		</ul>
+
+		<p><h5 class="subheader">PRESENT:</h5></p>
+		<p>Intracavity-doubled synchronously-pumped Optical Parametric Oscillator (OPO) </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/OPO.jpg"></div>
+		<br>
+		<blockquote>
+			<p>The pump of the OPO acts as the Stokes beam for the CARS nonlinear process while the output of the OPO acts as the pump beam for the CARS nonlinear process.</p>
+		</blockquote>
+		<ul class="small-block-grid-2">
+			<li>
+				<div class="text-center"><p>PROS:</p></div>
+				<ul>
+					<li>Complete elimination of pulse jitter </li>
+					<li>High spectral resolution (1-2 cm<sup>-1</sup>) </li>
+					<li>Broad tunability (500-3500 cm<sup>-1</sup>). </li>
+					<li>Longer operation wavelengths than previous systems (Stokes: 1064 nm; Pump: 780-920 nm)</li>
+				</ul>
+			</li>
+			<li>
+				<div class="text-center"><p>ROOM FOR IMPROVEMENT:</p></div>
+				<ul>
+					<li>Complex: Two laser sources </li>
+					<li>Even longer operation wavelengths are desired to increase penetration depths and reduce photodamage </li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="text-center"><img src="{{MEDIA_URL}}research/dual_opo.jpg"></div>
+		<br>
+		<ul class="small-block-grid-2">
+			<li>
+				<div class="text-center"><p>PROS:</p></div>
+				<ul>
+					<li>Single source for both Pump and Stokes. Colinear Pump and Stokes beams directly from the OPO. No need for optics to combine the two beams.</li>
+					<li>Raman shift selection controlled by the temperature of a single crystal (500-3800 cm<sup>-1</sup>)</li>
+					<li>No pulse jitter</li>
+					<li>High spectral resolution (1-2 cm<sup>-1</sup>)</li>
+					<li>Wavelengths available over hundreds of nanometers (740-1450 nm)</li>
+					<li>Long operating wavelengths minimize sample photodamage and increase penetration depth</li>
+				</ul>
+			</li>
+			<li>
+				<div class="text-center"><p>ROOM FOR IMPROVEMENT:</p></div>
+				<ul>
+					<li>Some detectors cannot be used due to poor red sensitivity</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p><h5 class="subheader">FUTURE:</h5></p>
+		<p>We are working on the future of CARS imaging...Surprises are on the way!</p>
+
+		<hr>
+		<p><a name="applications"></a></p>
+		<p><h3 id="applications">Applications of Coherent Raman Imaging</h3></p>
+		<p>Coherent Raman microscopy (CRM) is a chemically-selective imaging modality that provides microscopic contrast without the need of labels. It is a rapidly developing technique that is constantly finding new and exciting applications. Here we show some examples of our work in the past a few years.</p>
+		<p><h5 class="subheader">Studying Lipid Metabolism</h5></p>
+		<p>Many experiments in cell biology are limited by the use of perturbative labels. Fluorophores, beads, or metal particles can have large effects on the behavior of a labeled molecule or organelle in a living organism. Lipid droplets have recently emerged as important intracellular organelles relevant for widespread human diseases such as diabetes, hepatosteatosis and atherosclerosis. The ability to visualize lipid droplets within cells and study their biogenesis and function, however, is hampered by the lack of specific staining dyes, as well as the aforementioned problems associated with labeling. CRM&rsquo;s exquisite sensitivity to lipids makes it an ideal tool to study lipid cell biology.</p>
+		<p>We used RNA interference screening to study the regulatory genes affecting the lipid storage in <em>C. elegans </em>[1]. Figure 1 shows the SRS image of wild-type and mutant <em>C. elegans</em> at 2845 cm<sup>-1</sup>. The contrast is mostly from lipids, revealing the lipid content in the intestine.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/RNAi_screening.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 1.</strong> RNAi screening of new fat storage regulatory genes based on in&nbsp;vivo lipid quantification using label-free SRS microscopy. SRS images at 2845 cm<sup>-1</sup> for wild-type worm (a), the daf-2 mutant (b), and the transgenic worm intestinally overexpressing the lipase (c). (d) Quantification of fat content by SRS (n = 5 worms) and thin-layer chromatography&ndash;gas chromatography. (e) SRS signal increase compared to the control for genes that resulted in a fat content increase of more than 25% when inactivated by RNAi (P&lt; 0.0001, n = 5 worms).</p>
+		</blockquote>
+
+		<p><h5 class="subheader">Imaging Drug Delivery</h5></p>
+		<p>CRM is an ideal tool for tissue imaging. As a nonlinear effect, CRM can be used to image tissue with subcellular 3D spatial resolution to carry out optical biopsy with chemical selectivity. CRM microscopy has been successfully used to study skin tissue in vivo in real-time at video-rate speeds. </p>
+		<p>We used CRM to study the dynamics of drug penetration through the stratum corneum layer of skin. Figure 2 shows the time lapse SRS images of the drug ketoprofen at 1595 cm<sup>-1</sup> with a penetration depth of 12 mm [2]. Their monotonic decrease from the skin surface into the barrier and temporal evolution are both qualitatively and quantitatively comparable with data from the far more invasive and labor-intensive tape-stripping results. It also suggests a diffusion lag-time on the order of 2 h. </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/ketoprofen.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 2.</strong> Imaging the penetration of ketoprofen across the stratum corneum using SRS contrast at 1599 cm<sup>-1</sup> at different time points. Scale bar: 50 mm.</p>
+		</blockquote>      
+
+		<p><h5 class="subheader">Tumor Diagnosis</h5></p>
+		<p>CRM microscopy provides an interesting new contrast mechanism for imaging tumors in tissue. In particular, by making use of differences in lipid density and protein density, the nuclei morphology can be derived, providing contrast analogous to H&amp;E histopathology. Tumor margins can be seen with subcellular spatial resolution in fresh, unstained tissue. </p>
+		<p>Figure 3 shows the post-processed SRS images of both primary and metastatic tumors, highlighting the lipids (green) and nucleic contrast (blue). As can be seen, not only the tumor margin can be identified, but the margin of the primary tumor and metastatic tumor are also distinguishable. Comparison with histological data and Raman spectroscopy has established the chemical selectivity of the technique, and efforts to establish the use of CRM as a tool for virtual histology during brain tumor surgery are underway.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/glioblastoma.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 3.</strong> SRS images of glioblastoma multiform (primary brain tumor, left) and breast cancer brain metastasis (secondary tumor, right) reveal tumor margin. </p>
+		</blockquote>
+		<p>It is also possible to obtain whole mouse brain imaging by stitching many SRS images together. Figure 4 shows the image of a mouse brain section about 2 mm in thickness. Anatomy of the brain can be clearly delineated with the two color image.</p>
+		<div class="text-center">
+			<video width="640" height="360" autoplay="autoplay" loop>
+				<source src="{{MEDIA_URL}}research/Normal_Brain3_2x.mp4" type="video/mp4">
+				<source src="{{MEDIA_URL}}research/Normal_Brain3_2x.ogg" type="video/ogg">
+				Your browser does not support HTML5 video.
+			</video>
+		</div>
+		<blockquote>
+			<p><strong>Fig. 4.</strong> SRS image of sectioned healthy mouse brain.</p>
+		</blockquote>
+
+		<p><h5 class="subheader">Applications outside Biomedicine</h5></p>
+		<p>As a chemically sensitive technique, CARS microscopy has many applications outside biomedicine. One example is studying degradation of cellulose and lignin for biofuel production. Research of biofuels has experienced dramatic growth in recent years. The major challenge to be overcome in the widespread adoption of many biofuels is that biomass is intrinsically recalcitrant, partly caused by one of the two main chemical species in biomass, lignin. The SRS microscopy method can offer new information on the biomass conversion processes. Figure 5 shows the real-time monitoring of the hydrolysis kinetics of cellulose and lignins under chlorite treatment.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/corn_stover.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 5.</strong> Real-time SRS imaging of a delignification reaction in corn stover. a) and c) Lignin signal at 1600 cm<sup>-1</sup> before and 53 min after chlorite treatment reaction. b) and d) Corresponding cellulose signal at 1100 cm<sup>-1</sup>. e) color-coded rate constant of lignin degradation.</p>
+		</blockquote>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Wang, Meng C.; Min, Wei; Freudiger, Christian W.; Ruvkun, Gary; Xie, X. Sunney &quot;<a href="{{MEDIA_URL}}research/Freudiger_Nature_photonics_2011.pdf">RNAi screening for fat regulatory genes with SRS microscopy</a>&quot; <em>Nat Methods</em> 8, 135-138 (2011).</li>
+			<li>Saar, Brian G.; Contreras-Rojas, L. Rodrigo; Xie, X. Sunney; Guy, Richard H. &quot;<a href="{{MEDIA_URL}}research/Saar_Mol_Pharm_2011.pdf">Imaging Drug Delivery to Skin with Stimulated Raman Scattering Microscopy</a>,&quot; <em>Mol Pharm</em> 8, 969-975 (2011).</li>
+			<li>Saar, Brian G.; Zeng, Yining; Freudiger, Christian W.; Liu, Yu-San; Himmel, Michael E.; Xie, X. Sunney; Ding, Shi-You &quot;<a href="{{MEDIA_URL}}research/InterScience2010.pdf">Label-Free, Real-Time Monitoring of Biomass Processing with Stimulated Raman Scattering Microscopy</a>&quot;<em> Angew. Chem. Int. Ed.</em> 49, 5476-5479 (2010).</li>
+		</ol>
+
+	</div>
+{% endblock %}

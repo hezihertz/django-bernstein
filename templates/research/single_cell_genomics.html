@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block sub_tags %}
+	<ul id="sticky-nav" class="sub-nav">
+		<li><a href="#malbac">MALBAC Genome Amplification</a></li>
+		<li><a href="#digital_rna_seq">Digital RNA-Seq</a></li>
+		<li><a href="#fluorogenic_dna_seq">Fluorogenic DNA Sequencing</a></li>
+		<li><a href="#ctc">Circulating Tumor Cells</a></li>
+		<li><a href="#human_oocyte">Human Oocyte</a></li>
+	</ul>
+{% endblock %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+		<p><a name="malbac"></a></p>
+		<p><h3 id="malbac">Single Cell Sequencing by MALBAC</h3></p>
+		<p>
+		High-throughput sequencing is rapidly changing the ways that biological
+		questions are addressed. There is a growing need for sequencing a single
+		cell, as genetic variations unique to individual cells are often lost in a
+		population average. So far there has not been a single molecule approach
+		that can read the entire genome of a single cell. Instead, one has to
+		rely on whole genome amplification. However, this has been hindered by
+		strong amplification bias, resulting in a large fraction of the genome
+		being undetectable.
+		</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/CNV.jpg" width="600" height="390"></div>
+		<blockquote>
+			<p><strong>Fig. 1.</strong> Single cell copy number variations (CNVs)</p>
+		</blockquote>
+		<p>
+		We have recently developed a technique for whole genome amplification
+		that enables sequencing the genome of a single cell with high coverage.
+		The technique&#151;Multiple Annealing and Looping-Based Amplification Cycles
+		(MALBAC)&#151;uses a uniform, linear pre-amplification of DNA prior to
+		exponential amplification by PCR. The unprecedented uniformity provided
+		by MALBAC allows accurate detection of both single point mutations and
+		copy number variations of individual cells. We used this ability to
+		study the generation of new-born mutations in a cancer cell line and
+		were able to measure the mutation rate directly.
+		</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SNPonGenome.jpg" width="600" height="454"></div>
+		<blockquote>
+			<p><strong>Fig. 2.</strong> A single cancer cell's new-born single nucleotide variations (SNVs) that do not exist in the bulk. No false positives are detected</span></p>
+		</blockquote>
+		<p>
+		As one of the first applications, we applied MALBAC to sequence ~100
+		sperm cells of an individual, in collaboration with colleagues of BIOPIC at Peking University. 
+		During meiosis, crossover events occur,
+		creating genetic diversity by mixing paternal and maternal DNA. By
+		observing SNPs in a single sperm, we can identify the position of
+		crossover events and occasional segregation errors of chromosomes. We are
+		able to obtain the spatial distribution of recombination events along the
+		chromosomes with the highest resolution. Such an approach can be useful
+		in probing the origin of infertility.
+		</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Sperm_Recombine.jpg" width="600" height="268"></div>
+		<blockquote>
+			<p><strong>Fig. 3.</strong> Recombination events in a single sperm cell</p>
+		</blockquote>
+		<p>With our collaborators, we are applying MALBAC to cancer diagnostics with circulating tumor cells,
+		as well as to early prenatal diagnostics with fetal cells in the mother's
+		blood. In both cases only a few cells are available
+		for analysis. </p>
+
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Zong, Chenghang; Lu, Sijia; Chapman, Alec R.; Xie, X. Sunney. "<a href="{{MEDIA_URL}}research/Science-2012-Zong-1622-6.pdf">Genome-Wide Detection of Single-Nucleotide and Copy-Number Variations of a Single Human Cell</a>," <em>Science </em> 338:1622-1626 (2012).</li>
+			<li>Lu, Sijia; Zong, Chenghang; Fan, Wei; Yang, Mingyu; Li, Jinsen; Chapman, Alec R.; Zhu, Ping; Hu, Xuesong; Xu, Liya; Bai, Fan; Qiao, Jie; Tang, Fuchou; Li, Ruiqiang; Xie, X. Sunney. "<a href="{{MEDIA_URL}}research/Science-2012-Lu-1627-30.pdf">Probing Meiotic Recombination and Aneuploidy of Single Sperm Cells by Whole-Genome Sequencing</a>," <em>Science </em> 338:1627-1630 (2012).</li>
+		</ol>
+
+		<hr>
+		<p><a name="digital_rna_seq"></a></p>
+		<p><h3 id="digital_rna_seq">Digital RNA Sequencing</h3></p>
+		<p>After the inception of next-generation DNA sequencing, RNA sequencing (RNA-Seq) was developed, which provided a great tool for transcriptome profiling. However, conventional RNA-Seq still has much room for improvement. For example, conventional RNA-Seq is hampered by inaccuracy from exponential PCR amplification and sequence-dependent bias during sample preparation and sequencing.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/digitalRNA_seq.jpg"></div>
+		<p>We have developed a simple strategy for mitigating these complications, allowing truly digital RNA-Seq. Following reverse transcription, a large set of barcode sequences is added in excess, and nearly every cDNA molecule is uniquely labeled by random attachment of barcode sequences. After PCR, we applied deep sequencing to read the barcode and cDNA sequences. Rather than counting the number of reads, RNA abundance is measured based on the number of unique barcode sequences observed for a given cDNA sequence. We optimized the barcodes to be unambiguously identifiable, even in the presence of multiple sequencing errors. This method allows counting with single-copy resolution despite sequence-dependent bias and PCR-amplification noise, and is analogous to digital PCR but amendable to quantifying a whole transcriptome. We demonstrated transcriptome profiling of Escherichia coli with more accurate and reproducible quantification than conventional RNA-Seq. This technique is very useful for single cell analysis which requires high accuracy and sensitivity.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Shiroguchi, Katsuyuki; Jia, Tony Z.; Sims, Peter A.; Xie, X. Sunney. "<a href="{{MEDIA_URL}}research/PNAS-2012-Shiroguchi-1118018109.pdf">Digital RNA Sequencing Minimizes Sequence-dependent Bias and Ampli&#64257;cation Noise with Optimized Single-molecule Barcodes</a>," <em>PNAS</em> 109:1347-1352 (2012).</li>
+		</ol>
+
+		<hr>
+		<p><a name="fluorogenic_dna_seq"></a></p>
+		<p><h3 id="fluorogenic_dna_seq">Fluorogenic DNA Sequencing</h3></p>
+		<p>Since the first human genome determination a decade ago, the cost of genome sequencing has been reducing at a rate faster than the Moores&rsquo; law. Various faster and cheaper sequencing methods offer exciting possibilities for biology and medicine.</p>
+		<p> We have developed a multiplex sequencing-by-synthesis method combining terminal phosphate&ndash;labeled fluorogenic nucleotides (TPLFNs) and resealablepolydimethylsiloxane (PDMS) microreactors. In the presence of phosphatase, primer extension by DNA polymerase using nonfluorescentTPLFNs generates fluorophores, which are confined in the microreactors and detected. We immobilized primed DNA templates in the microreactors, then sequentially introduced one of the four identically labeled TPLFNs, sealed the microreactors, and recorded a fluorescence image after template-directed primer extension. With cycle times of &lt;10 min, we demonstrate sequencing with ~99% raw accuracy. Our &lsquo;fluorogenicpyrosequencing&rsquo; offers the benefits of pyrosequencing, such as rapid turnaround, one-color detection, and generation of native DNA, along with high detection sensitivity and simplicity of parallelization because simultaneous real-time monitoring of all microreactors is not required. </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Fluorogenic.jpg"></div>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Sims, Peter A.; Greenleaf, William J.; Duan, Haifeng; Xie, X. Sunney.&quot;<a href="{{MEDIA_URL}}research/Nature_Methods_Fluorogenic_DNA_Seq_2011.pdf">Fluorogenic DNA Sequencing in PDMS Microreactors</a>,&quot; <em>Nat Methods </em>8:575-580 (2011).</li>
+			<li>Steen, Jason A; Cooper, Matthew A. &quot;<a href="{{MEDIA_URL}}research/Nature_Methods_Steen_2011.pdf">Fluorogenic Pyrosequencing in Microreactors</a>,&quot; <em>Nat Methods </em>8:548-549 (2011).</li>
+		</ol>
+
+		<hr>
+		<p><a name="ctc"></a></p>
+		<p><h3 id="ctc">Circulating Tumor Cells</h3></p>
+		<p>Originating from primary tumors, circulating tumor cells (CTCs) enter peripheral blood and seed metastases, which account for the majority of cancer-related deaths. The genome sequencing of CTCs could offer non-invasive prognosis or even diagnosis, but has been hampered by low single cell genome coverage of scarce CTCs.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/CTC_fig1.png"></div>
+		<blockquote>
+			<p><strong>Fig. 1. </strong>(A) Reproducible copy number variation (CNV) patterns of a lung cancer patient. (B) Clustering analyses of CTCs based on the CNVs from seven patients. P1-P6 are lung cancer patients with adenocarcinoma. P1 is a patient experienced a phenotypic transition from adenocarcinoma in the lung to small cell lung cancer in the metastatic liver. P7 was a patient diagnosed as a mixture of adenocarcinoma and small cell lung cancer in the lung.</p>
+		</blockquote>
+		<p>In collaboration with colleagues at Cancer Hospital and BIOPIC of Peking University, we applied MALBAC for whole genome amplification of single CTCs from lung cancer patients. We observed characteristic cancer-associated single nucleotide variations and insertions/deletions in exomes of CTCs. These mutations provided information needed for individualized therapy, such as drug resistance and phenotypic transition, but were heterogeneous from cell to cell.</p>
+		<p>We discovered that, unlike the highly heterogeneous point mutations, copy number variation (CNV) patterns of the circulating tumor cells are reproducible within a patient, and even within different patients of the same cancer type, but are distinctly different for different cancer types. This offers a potential cancer diagnosis based on the CNV patterns. This result also raised intriguing questions on the genesis of metastasis, which can be studied further by our single cell genomics experiments.</p>
+
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Ni, Xiaohui; Zhuo, Minglei; Su, Zhe; Duan, Jianchun; Gao, Yan; Wang, Zhijie; Zong, Chenghang; Bai, Hua; Chapman, Alec R.; Zhao, Jun; Xu, Liya; An, Tongtong; Ma, Qi; Wang, Yuyan; Wu, Meina; Sun, Yu; Wang, Shuhang; Li, Zhenxiang; Yang, Xiaodan; Yong, Jun; Su, Xiao-Dong; Lu, Youyong; Bai, Fan; Xie, X. Sunney; Wang, Jie. &quot;<a href="{{MEDIA_URL}}research/PNAS-2013-Ni-21083-8.pdf">Reproducible copy number variation patterns among single circulating tumor cells of lung cancer patients</a>,&quot; <em>PNAS</em> <strong>110</strong>, 21083-21088 DOI: 10.1073/pnas.1320659110 (2013)</li>
+		</ol>
+
+		<hr>
+		<p><a name="human_oocyte"></a></p>
+		<p><h3 id="human_oocyte">Genome Analysis of Human Oocyte</h3></p>
+		<p>Single-cell genome analyses of human oocytes are important for meiosis research as well preimplantation genomic screening in in vivo fertilization. However, the lack of nonuniformity of single-cell whole-genome amplification hindered its implemenattion. In collaboration with Fuchou Tang's group at BIOPIC, and Jie Qiao's group at Peking University, we carried out whole-genome amplification and sequencing of single human oocytes using multiple annealing and looping-based amplification cycle (MALBAC) method, providing the first comprehensive study of crossovers and genetic interference in human oocytes</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/IVF_fig1.png"></div>
+		<p>Furthermore, we precisely and nondestructively deduce the genome of a fertilized egg, particularly the oocyte pronucleus, including information regarding aneuploidy and SNPs in disease-associated alleles, by sequencing the genomes of the dispensable first polar body (PB1) and PB2. The MALBAC-based preimplantation genomic screening in vitro fertilization enables accurate and cost-effective selection of normal fertilized eggs for embryo transfer.</p>
+
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Hou, Yu; Fan, Wei; Yan, Liying; Li, Rong; Lian, Ying; Huang, Jin; Li, Jinsen; Xu, Liya; Tang, Fuchou; Xie, X. Sunney; Qiao, Jie. &quot;<a href="{{MEDIA_URL}}research/PIIS0092867413015262.pdf">Genome Analyses of Single Human Oocytes</a>,&quot; <em>Cell</em> <strong>155</strong>, 1492-1506 DOI:10.1016/j.cell.2013.11.040 (2013)</li>
+		</ol>
+
+	</div>
+{% endblock %}

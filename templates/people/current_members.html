@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<div class="large-9 columns article-content" role="content">
+{% for g in group_members %}
+	<h3>{{g.title }}</h3>
+	<ul class="large-block-grid-2 medium-block-grid-2 small-block-grid-1">
+	{% for m in g.members %}
+		<li>
+			<div class="group-member-photo large-3 columns">
+				<span class="th"><img src="{{m.picture.url}}" height="{{m.picture.height}}" width="{{m.picture.width}}"></span>
+			</div>
+			<div class="group-member-info large-9 columns">
+				<h5>{% if m.personal_title %}{{ m.personal_title }} {% endif %}{{m.first_name}} {{m.last_name}}</h5>
+				<h6 class="subheader">Phone: {{m.work_number}}</h6>
+				<h6 class="subheader">Email: {{m.email}}</h6>
+			</div>
+		</li>
+	{% endfor %}
+	{% if not forloop.last %}<hr>{% endif %}
+	</ul>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+	{% if publications %}
+		{% for publication_category in publications %}
+			{% if publication_category.pub_list %}
+				<h3>{{publication_category.title}}</h3>
+				{% for publication in publication_category.pub_list %}
+					<div{% if not forloop.last %} style="margin-bottom: 20px;"{% endif %}>
+						{% include "publications/publication.html" %}
+					</div>
+				{% endfor %}
+				{% if not forloop.last %}<hr>{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+  </div>
+{% endblock %}

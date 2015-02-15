@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="large-9 columns article-content" role="content">
+{% if group_photos %}
+	<h3>Group Photos</h3>
+	<p>Photos courtesy of Rose Lincoln, Hertz, Udo Loster, Leibinger Foundation, and Marcus Halevi.</p>
+	<ul class="small-block-grid-3">
+	{% for m in group_photos %}
+		<li>
+			<a class="th" href="{{m.full_image.url}}">
+				<img src="{{m.thumbnail.url}}">
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,23 @@
+
+"
+CATEGORY = (
+	('Education', 'Education'),
+	('Appointments', 'Professional Appointments'),
+	('Honors', 'Honors'),
+	('Lectureships', 'Named Lectureships'),
+	('Interests', 'Recent Research Interests'),
+)
+
+class Background(models.Model):
+	year_start = models.IntegerField()
+	year_end = models.IntegerField()
+	title = models.CharField(max_length = 256)
+	url = models.URLField(null=True, blank=True)
+
+
+class BackgroundForm(ModelForm):
+	class Meta:
+		model = Background
+		fields = ['year_start', 'year_end', 'title', 'url']
+
+"

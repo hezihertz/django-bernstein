@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="large-9 columns article-content" role="content">
+
+{% if collaborators %}
+	<h3>Collaborators</h3>
+	<ul>
+	{% for m in collaborators %}
+		<li>
+			{{m.name}}, {{m.association}}
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block side_nav %}
+<div class="large-3 medium-4 columns">
+	<div class="sidebar">
+		<dl class="accordion">
+			<dd>
+				<a href="/publications/">All</a>
+			</dd>
+		</dl>
+		<dl class="accordion" data-accordion>
+			<dd>
+				<a href="#panel1">By Year</a>
+				<div id="panel1" class="content">
+					<ul class="side-nav">
+						<li><a href="/publications/year/2014">2014</a></li>
+						<li><a href="/publications/year/2013">2013</a></li>
+						<li><a href="/publications/year/2012">2012</a></li>
+						<li><a href="/publications/year/2011">2011</a></li>
+						<li><a href="/publications/year/2010">2010</a></li>
+						<li><a href="/publications/year/2009">2009</a></li>
+						<li><a href="/publications/year/2008">2008</a></li>
+						<li><a href="/publications/year/2007">2007</a></li>
+						<li><a href="/publications/year/2006">2006</a></li>
+						<li><a href="/publications/year/2005">2005</a></li>
+						<li><a href="/publications/year/2004">2004</a></li>
+						<li><a href="/publications/year/2003">2003</a></li>
+						<li><a href="/publications/year/2002">2002</a></li>
+						<li><a href="/publications/year/2001">2001</a></li>
+						<li><a href="/publications/year/before_2001">Before 2001</a></li>
+					</ul>
+				</div>
+			</dd>
+			<dd>
+				<a href="#panel2">By Field</a>
+				<div id="panel2" class="content active">
+					<ul class="side-nav">
+						<li><a href="/publications/single_molecule_enzymology">Single Molecule Enzymology</a></li>
+						<li><a href="/publications/single_molecule_spectroscopy">Single Molecule Spectroscopy</a></li>
+						<li><a href="/publications/gene_expression_in_living_cells">Gene Expression in Living Cells</a></li>
+						<li><a href="/publications/crs_microscopy">CRS Microscopy</a></li>
+						<li><a href="/publications/single_cell_genomics">Single Cell Genomics</a></li>
+					</ul>
+				</div>
+			</dd>
+		</dl>
+	</div>
+</div>
+{% endblock %}
+
+{% block base_content %}
+<div class="large-9 medium-8 columns content" role="content">
+{% block pub_content %}{% endblock %}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="large-9 columns article-content" role="content">
+{% if funding %}
+	<h3>Funding</h3>
+	<ul>
+	{% for m in funding %}
+		<li>
+			<a href="{{m.url}}">{{m.name}}</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}
+
+{% endblock %}
+

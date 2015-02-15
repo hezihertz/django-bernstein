@@ -1,0 +1,128 @@
+.branding-container {
+	text-align: center;
+	background: #BAC5C6;
+	height: 90px;
+	padding-top: 12px;
+}
+
+#branding-header {
+	font-family: Georgia,Baskerville,Palatino,'Palatino Linotype','Book Antiqua','Times New Roman',serif;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+#branding-left {
+	text-align: left;
+}
+
+#branding-left a {
+	color: #a23338;
+}
+
+#branding-right {
+	line-height: 70px;
+	text-align: right;
+}
+
+#branding-right a {
+	font-size: 30px;
+	color: #293352;
+}
+
+nav.top-bar {
+	text-align: center;
+}
+
+section.top-bar-section {
+	display: inline-block;
+}
+
+.sidebar {
+	padding-top: 30px;
+	padding-right: 5px;
+	margin-bottom: 40px;
+}
+
+.sidebar > dd.active {
+	color: #222
+}
+
+dl.accordion {
+	border-top: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+}
+
+.accordion dd > a {
+	font-size: 0.9rem;
+}
+
+.accordion dd.active > a {
+	background: #d1d1d1;
+}
+
+.accordion dd {
+	border-bottom: 1px solid #bbb;
+}
+
+.accordion dd > .content {
+	padding: 0.5rem;
+}
+
+.article {
+	padding: 0 20px;
+}
+
+.article-content {
+	margin-top: 30px;
+}
+
+.centered {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.affix {
+	position:fixed;
+	top: 32px;
+}
+
+ul.sub-nav {
+	max-width: 300px;
+}
+
+.sub-nav li {
+	display: inline-block;
+	float: none;
+}
+
+.sub-nav li > a {
+	color: #293352;
+}
+
+#map-canvas {
+	width: 550px;
+	height: 350px;
+	margin-top: 40px;
+	padding: 0px;
+}
+
+.infocontent {
+	overflow: hidden;
+}
+
+.group-member-photo {
+	padding: 0;
+}
+
+.group-member-info {
+	white-space: nowrap;
+}
+
+#footer a{
+	font-size: 12px;
+}
+
+#footer p{
+	font-size: 12px;
+}

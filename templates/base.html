@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}customize/favicon.ico" />
+	<link href="{{ STATIC_URL }}foundation/stylesheets/app.css" rel="stylesheet" type="text/css" />
+	<link href="{{ STATIC_URL }}customize/customize.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="initial-scale=1.0">
+	<script src="{{ STATIC_URL }}foundation/js/vendor/modernizr.js"></script>
+	<script src="{{ STATIC_URL }}foundation/js/vendor/jquery.js"></script>
+	<script src="{{ STATIC_URL }}foundation/js/vendor/fastclick.js"></script>
+	<script src="{{ STATIC_URL }}foundation/js/foundation/foundation.js"></script>
+	<script src="{{ STATIC_URL }}foundation/js/foundation/foundation.offcanvas.js"></script>
+	<title>Xie Group | {% block title_container %}{{title}}{% endblock %}</title>
+</head>
+<body>
+	<!-- Nav Bar -->
+	<div class="branding-container hide-for-small">
+	<div id="branding-header" class="row">
+		<div id="branding-left" class="large-9 columns">
+			<a href="http://www.harvard.edu/"><img src="{{MEDIA_URL}}icons/harvard_logo.png" width="200" /></a>
+			<a href="http://chemistry.harvard.edu/">Department of Chemistry &amp; Chemical Biology</a>
+		</div>
+		<div id="branding-right" class="large-3 columns hide-for-medium-down">
+			<a href="/">Xie Group</a>
+		</div>
+	</div>
+	</div>
+
+	<div class="off-canvas-wrap" data-offcanvas>
+	<div class="inner-wrap">
+	<nav class="top-bar hide-for-medium-down" data-topbar>
+	<section class="top-bar-section">
+		<ul class="right">
+			<li><a href="/">HOME</a></li>
+			<li><a href="/about_xie/">About Prof. Xie</a></li>
+			<li><a href="/people/">People</a></li>
+			<li><a href="/research/">Research</a></li>
+			<li><a href="/publications/">Publications</a></li>
+			<li><a href="/news/">News</a></li>
+			<li><a href="/resources/">Resources</a></li>
+			<li><a href="/pictures/">Pictures</a></li>
+			<li><a href="/contact/">Contact</a></li>
+			<li><a href="/intranet/">Intranet</a></li>
+		</ul>
+	</section>
+	</nav>
+
+	<nav class="tab-bar show-for-medium-down">
+		<section class="left-small">
+		<a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+		</section>
+		<section class="left tab-bar-section">
+		<h1 class="title">Xie Group</h1>
+		</section>
+
+		{% if side_nav %}
+		<section class="right tab-bar-section">
+		<h1 class="title">{{title}}</h1>
+		</section>
+		<section class="right-small">
+		<a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+		</section>
+		{% endif %}
+	</nav>
+	<aside class="left-off-canvas-menu">
+		<ul class="off-canvas-list">
+			<li><a href="/">HOME</a></li>
+			<li><a href="/about_xie/">About Prof. Xie</a></li>
+			<li><a href="/people/">People</a></li>
+			<li><a href="/research/">Research</a></li>
+			<li><a href="/publications/">Publications</a></li>
+			<li><a href="/news/">News</a></li>
+			<li><a href="/resources/">Resources</a></li>
+			<li><a href="/pictures/">Pictures</a></li>
+			<li><a href="/contact/">Contact</a></li>
+			<li><a href="/intranet/">Intranet</a></li>
+		</ul>
+	</aside>
+	{% if side_nav %}
+	<aside class="right-off-canvas-menu">
+		<ul class="off-canvas-list">
+		{% for s in side_nav %}
+			<li><a href="{{s.url}}">{{s.url_title}}</a></li>
+		{% endfor %}
+		</ul>
+	</aside>
+	{% endif %}
+	<a class="exit-off-canvas"></a>
+	<!-- End Nav -->
+
+
+	<!-- Main Page Content and Sidebar -->
+	<section class="main-section">
+	<div class = "row">
+
+		<!-- Side Navigation Panel -->
+		{% if side_nav %}
+		{% block side_nav_panel %}
+		<div class="large-3 columns hide-for-medium-down">
+			<div class="row">
+				<div class="sidebar">
+					<dl id="main-sidebar" class="accordion">
+						{% for s in side_nav %}
+							<dd {% if active_nav == s.url %}class="active"{% endif %}>
+								<a href="{{s.url}}">{{s.url_title}}</a>
+							</dd>
+						{% endfor %}
+					</dl>
+				</div>
+			</div>
+			<div class="row">
+		{% block sub_tags %}{% endblock %}
+			</div>
+		</div>
+		{% endblock %}
+		{% endif %}
+		<!-- End Side Navigation Panel -->
+
+		<!-- Main Content -->
+		{% block main_content %}{% endblock %}
+		<!-- End Main Content -->
+
+		<!-- Footer -->
+		<div id="footer" class="row text-center">
+			<hr />
+			<ul class="inline-list">
+				<li><a href="/">HOME</a></li>
+				<li><a href="/about_xie/">PROF. XIE</a></li>
+				<li><a href="/people/">PEOPLE</a></li>
+				<li><a href="/research/">RESEARCH</a></li>
+				<li><a href="/publications/">PUBLICATIONS</a></li>
+				<li><a href="/news/">NEWS</a></li>
+				<li><a href="/resources/">RESOURCES</a></li>
+				<li><a href="/pictures/">PICTURES</a></li>
+				<li><a href="/contact/">CONTACT</a></li>
+				<li><a href="/intranet/">INTRANET</a></li>
+			</ul>
+			<p>Copyright &copy; Xie Group, 2014</p>
+		</div>
+		<!-- End Footer -->
+	</div>
+	</section>
+
+	</div>
+	</div>
+
+	<script src="{{ STATIC_URL }}customize/affix.js"></script>
+	<script src="{{ STATIC_URL }}customize/scrollspy.js"></script>
+	<script src="{{ STATIC_URL }}customize/customize.js"></script>
+
+</body>
+</html>

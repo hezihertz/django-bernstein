@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block sub_tags %}
+	<ul id="sticky-nav" class="sub-nav">
+		{% for category, category_title, publications in categories %}
+		<li><a href="#{{category}}">{{category_title}}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+		{% for category, category_title, publications in categories %}
+			<p><h3 id="{{category}}">{{category_title}}</h3></p>
+			{% for publication in publications %}
+				<div{% if not forloop.last %} style="margin-bottom: 20px;"{% endif %}>
+					{% include "publications/publication.html" %}
+				</div>
+			{% endfor %}
+			{% if not forloop.last %}<hr>{% endif %}
+		{% endfor %}
+{% endblock %}
+

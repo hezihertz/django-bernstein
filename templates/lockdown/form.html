@@ -1,0 +1,21 @@
+{% extends "lockdown/base.html" %}
+
+{% block title %}Xie Group Intranet{% endblock %}
+
+{% block content %}
+<div id="lockdown">
+  <h2>Login to Xie Group Intranet</h2>
+
+  {% if form %}
+
+  <form action="" method="post">
+	{% csrf_token %}
+    {{ form.as_p }}
+    <p><input type="submit" value="Login"></p>
+  </form>
+
+  {% endif %}
+
+</div>
+{% endblock %}
+

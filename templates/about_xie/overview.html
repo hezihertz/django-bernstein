@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+	<h3>Professor Xiaoliang Sunney Xie</h3>
+	<hr>
+	<div class="row">
+	<div class="large-4 columns">
+		<img src="/media/images/headshots/Sunney_Xie.jpg">
+	</div>
+	<div class="large-8 columns">
+		<div class="row">
+			<div class="large-3 columns">Post:</div>
+			<div class="large-9 columns">Harvard University, Department of Chemistry and Chemical Biology, 12 Oxford Street, Cambridge, MA, 02138</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="large-3 columns">Phone:</div>
+			<div class="large-9 columns">(617) 496-9925</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="large-3 columns">Fax:</div>
+			<div class="large-9 columns">(617) 496-8709</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="large-3 columns">Email:</div>
+			<div class="large-9 columns">xie@chemistry.harvard.edu</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="large-3 columns">URL:</div>
+			<div class="large-9 columns">http://bernstein.harvard.edu</div>
+		</div>
+	</div>
+	</div>
+
+	<hr>
+	<h3>Education</h3>
+	<dl class="row">
+	{% for e in educations %}
+		<dd class="large-2 columns">{{e.year_start}}</dd>
+		<dd class="large-10 columns">{{e.title}}</dd>
+	{% endfor %}
+	</dl>
+
+	<hr>
+	<h3>Professional Appointments</h3>
+	<dl class="row">
+	{% for e in appointments %}
+		<dd class="large-2 columns">{{e.year_start}} &ndash; {{e.year_end|default_if_none:"Present"}}</dd>
+		<dd class="large-10 columns">{{e.title}}</dd>
+	{% endfor %}
+	</dl>
+
+	<hr>
+	<h3>Honors</h3>
+	<dl class="row">
+	{% for e in honors %}
+		{% if not e.url %}
+			<dd class="large-2 columns">{{e.year_start}}</dd>
+			<dd class="large-10 columns">{{e.title}}</dd>
+		{% else %}
+			<dd class="large-2 columns">{{e.year_start}}</dd>
+			<dd class="large-10 columns"><a href="{{e.url}}">{{e.title}}</a></dd>
+		{% endif %}
+	{% endfor %}
+	</dl>
+
+	<hr>
+	<h3>Named Lectureships</h3>
+	<dl class="row">
+	{% for e in lectureships %}
+		<dd class="large-2 columns">{{e.year_start}}</dd>
+		<dd class="large-10 columns">{{e.title}}</dd>
+	{% endfor %}
+	</dl>
+
+	<hr>
+	<h3>Recent Research Interests</h3>
+	<dl class="row">
+	{% for e in interests %}
+		<dd class="large-12 columns">{{e.title}}</dd>
+	{% endfor %}
+	</dl>
+	</div>
+{% endblock %}

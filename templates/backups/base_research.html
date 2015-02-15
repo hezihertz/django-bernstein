@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block side_nav %}
+<div class="large-3 medium-4 columns">
+	<div class="sidebar">
+		<dl class="accordion">
+			<dd>
+				<a href="/research/overview/">Overview</a>
+			</dd>
+			<dd>
+				<a href="/research/single_molecule_enzymology/">Single Molecule Enzymology</a>
+			</dd>
+			<dd>
+				<a href="#panel2">Single Molecule Spectroscopy</a>
+			</dd>
+			<dd>
+				<a href="#panel3">Gene Expression in Living Cells</a>
+			</dd>
+			<dd>
+				<a href="#panel4">CRS Microscopy</a>
+			</dd>
+			<dd>
+				<a href="#panel5">Single Cell Genomics</a>
+			</dd>
+		</dl>
+	</div>
+{% block sub_tags %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block base_content %}
+<div class="large-9 medium-8 columns article-content" role="content">
+{% block research_content %}{% endblock %}
+</div>
+{% endblock %}

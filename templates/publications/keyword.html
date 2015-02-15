@@ -1,0 +1,16 @@
+{% extends "publications/base_pub.html" %}
+
+{% block pub_content %}
+	{% if publications %}
+		<h2>{{category}}</h2>
+		<hr/>
+		{% for publication in publications %}
+			<div{% if not forloop.last %} style="margin-bottom: 20px;"{% endif %}>
+				{% include "publications/publication.html" %}
+			</div>
+		{% endfor %}
+	{% else %}
+		<h2>Sorry,</h2>
+		no publications found with the keyword &quot;{{ category }}&quot;.
+	{% endif %}
+{% endblock %}

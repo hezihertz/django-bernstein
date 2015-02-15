@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block sub_tags %}
+	<ul id="sticky-nav" class="sub-nav">
+		{% for year, publications in years %}
+		<li><a href="#{{year}}">{{year}}</a></li>
+		{% endfor %}
+	</ul>
+{% endblock %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+	{% for year, publications in years %}
+		<p><h3 id="{{year}}">{{ year }}</h3></p>
+		<div{% if not forloop.last %} style="margin-bottom: 30px;"{% endif %}>
+		{% for publication in publications %}
+			<div{% if not forloop.last %} style="margin-bottom: 20px;"{% endif %}>
+				{% include "publications/publication.html" %}
+			</div>
+		{% endfor %}
+		</div>
+		{% if not forloop.last %}<hr>{% endif %}
+	{% endfor %}
+{% endblock %}

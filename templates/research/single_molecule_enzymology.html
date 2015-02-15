@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+
+{% block sub_tags %}
+	<ul id="sticky-nav" class="sub-nav">
+		<li><a href="#single_molecule_enzymatic_dynamics">Enzymatic Dynamics</a></li>
+		<li><a href="#single_molecule_conformational_dynamics">Conformational Dynamics</a></li>
+		<li><a href="#single_molecule_enzymatic_assays">Enzymatic Assays</a></li>
+		<li><a href="#non_specific_dna_protein_interactions">DNA-Protein Interactions</a></li>
+		<li><a href="#allostery_through_dna">DNA Allostery</a></li>
+	</ul>
+{% endblock %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+		<p><a name="single_molecule_enzymatic_dynamics"></a></p>
+		<p><h3 id="single_molecule_enzymatic_dynamics">Single Molecule Enzymatic Dynamics</h3></p>
+			<p><h5 class="subheader">Real-Time Observations of Single Enzyme Turnovers</h5></p>
+			<p>Essential to all life processes, enzymes are biological catalysts that accelerate biochemical reactions with high efficiency and high fidelity, unmatchable by artificial systems. The quest to understand how an enzyme works in real-time at the molecular level remains a central question. What can we learn from single-molecule experiments? </p>
+			<p>Our group was fortunate to be able to participate in the development of single-molecule imaging and spectroscopy at room temperature in early 1990s. The application of single-molecule imaging, spectroscopy, and manipulation has now lead to widespread research activities around the world because many compelling problems in biology can best be addressed with the single-molecule approach. Thanks to developments of <em>in vitro </em> assays by many groups, single-molecule enzymology has since brought mechanistic understanding of specific systems, as well as fundamental insights into enzymatic catalysis, even the prospect of human genome sequencing by the single-molecule approach </p>
+			<p>In 1998, we reported a real-time observation of enzymatic turnovers of a single molecule cholesterol oxidase, a flavoenzyme that catalyzes oxidation of cholesterol by oxygen [1] (Fig. 1A). The active site of the enzyme, flavin adenine dinucleotide (FAD, Fig. 1B), is naturally fluorescent in its oxidized form but not in its reduced form. With excess amounts of cholesterol and oxygen, the emission from a single enzyme molecule confined in an agarose gel exhibits an on-off behavior (Fig. 1C), each on-off cycle corresponding to an enzymatic turnover. This time trace is not reproducible even though the statistical properties are reproducible. Stochastic behavior like this had been seen in single channel recording [2], but here we are were able to monitor chemical reactions of a single enzyme molecule taking place in real-time. </p>
+			<div class="text-center"><img src="{{MEDIA_URL}}research/enzymatickinetics_clip_image002.gif"></div>
+			<blockquote>
+			<p>Fig.1. (A) Enzymatic cycle of cholesterol oxidase, which catalyzes the oxidation of cholesterol by oxygen. The enzyme's naturally fluorescent FAD active site is first reduced by a cholesterol substrate molecule, generating a nonfluorescent FADH2, which is then oxidized by oxygen. (B) Structure of FAD, the active site of cholesterol oxidase. (C) A portion of the fluorescence intensity time trace of a single cholesterol oxidase molecule. Each on-off cycle of emission corresponds to an enzymatic turnover. (D) Distribution of emission on-times derived from (C). The solid line is the convolution of two exponential functions with rate constants k<sub>1</sub> [S] = 2.9s<sup>-1 </sup> and k<sub>2</sub> = 17s<sup>-1</sup>, reflecting the existence of an intermediate, ES, the enzyme-substrate complex, as shown in the kinetic scheme in the inset. From ref. 1.</p>
+			</blockquote>
+			<p><h5 class="subheader">The Fluctuating Enzyme</h5></p>
+			<p>The exponential rise and decay of the histogram of the waiting times indicate the existence of the enzyme-substrate complex (Fig.1D). By conducting other statistical analyses of the data, we found that a single enzyme molecule exhibits fluctuations of catalytic rates &ndash; a single enzyme molecule does not have a rate constant! This phenomenon, which had been hidden in the conventional experiments, turned out to be general. It is associated with  conformational fluctuations (see next section). </p>
+			<p>Most ensemble enzymatic kinetics have been satisfactorily described by the classic Michaelis-Menten equation [3].  The Michaelis-Menten equation  explicitly gives the hyperbolic dependence of the enzyme velocity v on substrate concentration [S] in an ensemble experiment, where K<sub>M</sub> = (k<sub>-1</sub> + k<sub>2</sub>)/k<sub>1</sub> is the Michaelis constant, [E]<sub>T </sub>= [E] + [ES] is the total enzyme concentration, and vmax is the maximum enzyme velocity. The observation of fluctuation occurring on multiple time scales raises an intriguing question: why does the Michaelis-Menten equation work so well despite the broad distributions and dynamic fluctuations at the single-molecule level? </p>
+			<p><h5 class="subheader">Michaelis-Menten Equation Revisited </h5></p>
+			<p>We conducted a single-molecule experiment on &szlig;-galactosidase with a fluorogenic substrate that offers superb statistics (Fig. 2). This study allowed us to confirm the dispersed kinetics (Fig. 2C) and fluctuations of the catalytic rate at multiple time scales, from 10ms to 10s (Fig. 2D). Interestingly, despite the fluctuations, the Michaelis-Menten equation still holds on a single enzyme basis, except k<sub>cat</sub> and K<sub>M</sub> bear different microscopic interpretations, i.e. the weighted average of different conformers [4].</p>
+			<div class="text-center"><img src="{{MEDIA_URL}}research/enzymatickinetics_clip_image002.jpg" alt="" width="380" height="438"></div>
+			<blockquote>
+			<p>Fig. 2 (A) One &szlig;-galactosidase enzyme molecule is linked to a streptavidin-coated polystyrene bead via a flexible PEG linker. The bead binds to the biotin - PEG surface of a cover slip. The hydrolysis of the photogenic substrate RGP is catalyzed by the enzyme, and the fluorescent product resorufin (R) is monitored in the diffraction-limited confocal volume. (B) A segment of the chronological waiting time trajectory as a function of time. (C) Histograms of the waiting time distributions at different substrate concentrations [S]. (D) Normalized autocorrelation functions of waiting times in the time trace in (B). This highlights the broad range of time scales of turnover rate fluctuations, spanning at least four decades from 10<sup>-3</sup> to 10s. (E) Single-molecule Lineweaver - Burke plot of mean waiting times vs 1/[S]. (F) Ensemble averaged Lineweaver - Burke plot agrees well with (E), indicating that the Michaelis-Menten equation holds on a single-molecule basis despite the fluctuation. From ref. 4.</p>
+			</blockquote>
+            <p>This explains why the Michaelis-Menten equation works so well even in the presence of large fluctuations at a broad range of time scales. This intrinsic fluctuation is not significant for a system that comprises a large number of enzyme molecules, knowing the ensemble average result would be sufficient. However, if, in a living cell, there is only one or a few copies of a particular enzyme, such fluctuation might result in a large physiological effect. </p>
+			<p>It is important to stress that single-molecule enzyme turnover experiments are distinctly different from conventional <em>in vitro </em> enzymatic assays in that they are conducted under the nonequilibrium steady state condition with invariant substrate concentrations, which is usually the condition in a living cell [5]. We have recently developed a rate theory to describe how enzymes work under this condition [6].</p>
+			<p><h5 class="subheader">References:</h5></p>
+			<ol>
+			  <li> Lu HP, L Xun, XS Xie (1998 <em>) Science </em>282:1877.</li>
+			  <li>Sackman B, E Neher (1995) <em>Single-Channel Recording</em>. 2nd ed. Plenum (New York and London). </li>
+			  <li>Michaelis L, ML Menten (1913) <em>Biochem. </em> Z. 49:333.</li>
+			  <li>English B et al. (2006) <em>Nat. Chem. Bio. </em>2:87. </li>
+			  <li>Min W, H Qian, XS Xie (2005) <em>Nano Letters</em>, 5:23773. </li>
+			  <li>Min W, XS Xie, B. Bagchi (2008) <em>J. Phys. Chem. </em>112, 454. </li>
+			</ol>
+
+		<hr>
+		<p><a name="single_molecule_conformational_dynamics"></a></p>
+		<p><h3 id="single_molecule_conformational_dynamics">Single Molecule Conformational Dynamics</h3></p>
+
+		<p>The conformational dynamics of a biomolecule is crucial to its biological functions.  Single molecule techniques are particularly informative about conformational dynamics because these motions are usually unsynchronized among the molecules. There are two types of conformational changes, one is the spontaneous, or thermal activated fluctuation, the other is a nonequilibrium process driven by substrate binding or chemical reactions.</p>
+		<p>Fluorescence Resonance Energy Transfer (FRET) technique is the most widely used fluorescent method for studying conformational changes. Single molecule FRET was first demonstrated by Ha and Weiss [1].  However, it is only sensitive to the distance change on the order of nanometers.  We have developed two methods based on single-molecule electron transfer [2] and motion hindering in the excited stated [3], which are complementary to FRET.</p>
+		<p><h5 class="subheader">Single-Molecule Conformational Dynamics Probed by Electron Transfer</h5></p>
+		<p>We studied a flavin-enzyme, a flavinreductase (Fre), which catalyzes the reduction of a flavin by NADH (Fig. 1A). In contrast to the free flavin fluorescence with a mono-exponential decay with a long lifetime, the decay of Fre-bound flavins is much faster and is multi-exponential, which have been attributed to quenching of the excited state by ET from nearby residues tyrosines. There are three tyrosines around FAD. Through site-directed mutagenesis, we proved that tyrosine35, the nearest to flavin, is the major quencher. We use excited state electron transfer (ET) to probe the subtle structure change within the intact protein of Fre.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Frefad.jpg"><img src="{{MEDIA_URL}}research/ensemble_decay.jpg"></div>
+		<blockquote>
+		<p>Fig. 1. Fre structure (left) and fluorescence decays (right) of the wide type and mutants of Fre. We replaced the three tyrosines (Y) individually with a serine (S) and generated Y35S, Y72S, and Y116S&mdash; by site-directed mutagenesis. Drastic increase of fluorescence lifetime was only observed for the Y35S complex (red curve), proving the quenching by tyrosine Y35 [2].</p>
+		</blockquote>
+		<p>Another system is a protein complex formed between fluorescein (FL) and monoclonal antifluorescein 4-4-20 (anti-FL). This complex is highly stable, allowing long-time observations at the single-molecule level. Fig.2 shows its crystal structure [6]. Fluorescein is the ET acceptor and a nearby tyrosine donor is the donor. The shortened fluorescein fluorescence lifetime by the tyrosin is shown Fig. 2.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Fret_Fl_anti_FL.jpg"/></div>
+		<blockquote>
+		<p>Fig. 2. (left) Fluorescein (FL) and anti-FL complex with the electron transfer donor and acceptor, Tyr37 and FL, respectively. (right) Monoexponential fluorescence lifetime decay for a single FL molecule (black curve), multiexponential fluorescence decay for the FL/anti-FL complex at both ensemble (green curve) and single- molecule (red curve) levels, and the instrumental response function (blue curve) [5].</p>
+		</blockquote>
+		<p>The energy diagram of the excited state Et is shown in Fig. 3. The fluorescence lifetime t is determined by the radiative rate &#947; relaxation rate, the fluorescence lifetime t = 1/(&#947; + k<sub>Et</sub>). The Et rate is highly dependent on the edge to edge distance between the electron donor and acceptor following k<sub>Et</sub>= k<sub>0</sub>*exp(- &#946; R). Therefore, the fluctuation of the donor-acceptor distance R results in the fluctuation of the fluorescence lifetime t. The scaling factor b is around 1.0~1.4 &Aring;<sup>-1</sup> for proteins, which makes Et a distance dependent probe for the subtle motions on angstrom scale. The amino acid residues tyrosine and tryptophan or DNA base Guanine can serve as natural Et donors. A typical Et acceptors can be natural chromophores such as flavin, or artificial dyes such as rhodamines. </p>
+		 <div class="text-center"><img src="{{MEDIA_URL}}research/energy_diagram.jpg"><img src="{{MEDIA_URL}}research/Detection_Scheme.jpg"></div>
+		<blockquote>
+		<p>Fig. 3. Probing single molecule conformational dynamics by electron transfer, on a photon-by-photon basis [2].</p>
+		</blockquote>
+		<p>We use a confocal microscope to detect the fluorescence signal from a single molecule.  Different from the conventional time correlated single photon counting, for each detected fluorescence photon with index, p, we record both the delay time respective to its excitation pulse, &Tau;<sub>p</sub>, and the chronological arrival time t<sub>p</sub> (Fig. 3). Instead of binning the detected photon to calculate the fluorescence lifetime, the lifetime correlation function C(t) can be calculated with the novel photon-by-photon correlation method. Such a method provides dynamic information a broad range of time scale, particularly the long time scales not accessible by molecular dynamics simulations.</p>
+		<p><h5 class="subheader">Equilibrium Conformational Dynamics Explained by the Generalized Langevin Equation</h5></p>
+		<p>We found in the two systems described above that the distance between an electron transfer donor and an acceptor was found to take place at a broad range of time scales, ranging from 10ms to 10s (Fig. 4) [2,5]. This equilibrium conformational fluctuation is a general phenomenon that occurs in Other systems, even in MD simulations (5).  Such conformational fluctuations at a broad range of time scales result from the flexible but glassy nature of enzymes as biopolymers, and result in fluctuations in the rates of enzymatic reactions. The physical picture to explain the observation is that a protein molecule is a &quot;sluggish&quot; system in which one degree of freedom (say, x) is strongly coupled to other degrees of freedom. A change in x requires collective motions of the other degrees of freedom. This results in a long time memory effect, a characteristic of non-Markovian behavior. We have provided a mathematical reduction of this picture by the generalized Langevin equation [6].
+		</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/donor_acceptor_distance123.jpg"></div>
+		<blockquote>
+		<p>Fig. 4 (A) Segment of the donor&ndash;acceptor distance, x(t) trajectory with the corresponding probability density function P(x) with a Gaussian fit. (B) Harmonic potential of mean force, U(x) = &minus;k<sub>B</sub>Tln[P(x)]. (C) Autocorrelation of the donor&ndash;acceptor distance in (A) that shows the broad range of time scale distance fluctuation, which can be fit well with the generalized Langevin equation [5].</p>
+		</blockquote>
+		<p><h5 class="subheader">Probing Non-equilibrium Conformational Motions by Fluorescence Intensity Changes of a Hindered Fluorophore</h5></p>
+		<p>Functionally important conformational motions of macromolecules, such as enzymes, are often nonequilibrium processes driven by substrate binding or chemical reactions. Unlike the equilibrium fluctuations that are ubiquitous for any two points inside a macromolecule, functionally important conformational changes are often designed and evolved by nature.</p>
+		<p>For example, DNA polymerase, is a molecular copy machine for DNA, whose structure resembles a palm and fingers holding a primed DNA. According to the crystal structure, upon binding of the substrate dNTP, it undergoes a conformational change, known as closing of the fingers' domain, as shown in the animation extrapolated from the structures with and without the substrate (Fig. 5).</p>
+		<p>We designed an assay to probe this motion in real-time based on fluorescence intensity changes of a fluorophore (Cy3) within the protein (DNA polymerase). When the protein conformation hinders torsional motions of the dye, the fluorescene intensity is increased. Similar increases of fluorescence intensity was seen in solutions when the viscosity of the solvent is increased (Fig. 5). </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Klentaq_Ploym.gif" /><img src="{{MEDIA_URL}}research/Fl_intensity_traj.jpg" /></div>
+		<blockquote>
+		<p>Fig. 5. Left: Closing of DNA Polymerase's fingers' domain, according to the x-ray structures with and without the dNTP substrate [8]. Middle: T7 RNA polymerase bound on a primed DNA duplex that is labeled with a Cy3 dye molecule (red circle). Right: Fluorescence intensity of Cy3 is increased when the nonradiative decay rate of Cy3 is decreased due to hindered torsional motions of the excited state of Cy3 molecule.</p>
+		</blockquote>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Fl_intensity_traj2.jpg" /></div>
+		<blockquote>
+		<p>Fig. 6. Fluorescence intensity trajectories of a surface-immobilized primed DNA duplex that is labeled with a Cy3 dye in the presence of DNA polymerase in solution [3].</p>
+		</blockquote>
+		<p>Figure 6 shows, at zero substrate concentration (first time trace), the intensity switches between two levels: the lower level corresponds to free DNA and the higher level  corresponds to the polymerase bound on DNA, hindering the torsional motion of Cy3. When a matched substrate dCTP is introduced, the fluorescence intensity increased to yet another higher level, due to the conformational changes associated with the closing of the fingers' domain.  The subsequent polymerization reaction is blocked such that the dCTP dissociates and the same process can be monitored repeatedly. As a control experiment, when the exo-nuclease part of the polymerase (blue part) is removed, freeing the hindered Cy3 motion, the intensity increases no longer occur.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>S. Weiss, <em>Nature Structural  Biology</em>, 2000, 7, 724-729.</li>
+			<li>Yang, H.; Luo, G.; Karnchanaphanurach, P.; Louie, T.-M.; Rech,I.;  Cova, S.; Xun, L.; Xie, X. S. Protein Conformational Dynamics Probed by  Single-Molecule Electron Transfer. <em>Science </em>2003, 302, 262-266.</li>
+			<li>Luo, Guobin; Wang, Mina; Konigsberg, William H.; Xie, X. Sunney &quot;Single-molecule and ensemble  fluorescence assays for a functionally important conformational change in T7  DNA polymerase,&quot;<em>PNAS</em>, 104, 12610-12615 (2007).</li>
+			<li>M. Whitlow <em>et al., </em>Protein Eng. 1995, 8, 749 (1995),</li>
+			<li>Min,W.;Luo,G.;Cherayil,B.J.;Kou,S.C.;Xie,X.S.Observation of a Power  Law Memory Kernel for Fluctuations within a Single Protein Molecule. <em>Phys. Rev. Lett. </em>2005, 94, 198302(1)-198302-(4).</li>
+			<li>Kou, S. C.; Xie, X. S. Generalized Langevin Equation with Fractional  Gaussian Noise: Subdiffusion within a Single Protein Molecule. <em>Phys. Rev. Lett.</em>2004, 93,  180603(1)-180603(4).</li>
+			<li>Luo, Guobin; Andricioaei, Ioan; Xie, X. Sunney; Karplus, Martin  &quot;Dynamic Distance Disorder in Proteins  Is Caused by Trapping,&quot; <em>J. Phys. Chem. B,</em>2006,110, 9363-9367.</li>
+			<li>Li, Ying;  Korolev, Sergey; Waksman, Gabriel. &quot;Crystal structures of open and closed forms of binary and ternary complexes of the large fragment of Thermus aquaticus DNA polymerase I: structural basis for nucleotide incorporation,&quot; <em>EMBO J.</em>, 1998, 17, 7514.</li>
+		</ol>
+
+		<hr>
+		<p><a name="single_molecule_enzymatic_assays"></a></p>
+		<p><h3 id="single_molecule_enzymatic_assays">Single Molecule Enzymatic Assays</h3></p>
+		<p>Like enzymology in general, single-molecule enzymology has been limited  and facilitated by assay developments. Recent advances in single-molecule enzymatic assays have profoundly  changed how biochemical reactions are studied, revealing new insights into  established problems and opening new lines of investigation. To that end, our group has developed single molecule fluorescence and flow stretching enzymatic assays.</p>
+		<p><h5 class="subheader">Single Molecule Fluorescence Assays by Fluorescent Measurements</h5></p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SMEnzyme1.jpg" /><img src="{{MEDIA_URL}}research/SMEnzyme2.jpg" /></div>
+		<p>Here we list the single-molecule enzymatic turnover assays by fluorescence detection:</p>
+		<ul>
+			<li>Assays with fluorescent active sites [1], as demonstrated for cholesterol oxidase in the left figure above.</li>
+			<li>Assays with fluorescently  labeled substrates, such as ATP or dNTP, which require either low substrate  concentrations [2] or zero-mode waveguide to suppress the strong background fluorescence signal [3]. This latter method has been used  for single molecule DNA sequencing.</li>
+			<li>Assays with FRET pairs that report conformational changes  triggered by enzymes, such as staphylococcal nuclease [4], a ribozyme [5], T4 Lysozyme [6].</li>
+			<li>Assays based on rotational [7] and translational [8] trajectories of molecular  motors by recording movies of fluorescent labels.</li>
+			<li>Assays based on intensity  changes of  fluorophores that are associated with conformational changes, such  as fluorescence quenching in a DNA polymerase upon substrate dNTP binding [9].</li>
+			<li>Assays based on a  fluorogenic substrate converted to a fluorescent product molecule by an  enzymatic reaction (see right figure above), which was first proposed  and attempted for horseradish peroxidase [10]. Because fluorophores are  continuously replenished and diffuse away from the excitation volume, this  assay circumvents the photobleaching problem that hampers all the other assays,  and provides extremely long time traces [11,12].</li>
+		</ul>
+		<p><h5 class="subheader">Flow Stretching Assay</h5></p>
+		<p>We have  exploited an extremely simple assay based on flow-stretched DNA to monitor the 
+		  activity of many  individual nucleic acid enzymes on DNA simultaneously [13-15]. Individual DNA  
+		  molecules are  attached at one end of the glass surface of a flow cell. When a laminar flow is  applied  
+		  above the  surface, the DNA molecules are stretched. If beads are attached to the free  ends 
+		  of the DNA, the  molecules are stretched to a uniform tension by the drag force on the beads, 
+		  allowing  careful measurement of the DNA lengths by tracking the positions of the beads  with 
+		  an  inexpensive CCD camera (accuracy ~10 nm for seconds, ~100 nm for minutes).</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/EXO12.jpg" width="550" height="269"></div>
+		<p>The  force-extension curves of a single-stranded (ssDNA) and a double-stranded (dsDNA) l phage 
+		  DNA  (48,502 nt) are shown. Much of the pioneering work of studying the mechanical properties of 
+		  individual DNA molecules is done in Carlos Bustamante's Lab at UC Berkeley [164]. The  coiling of ssDNA  causes it to be shorter than dsDNA at low stretching forces (&lt;6 pN).  Consequently, a (enzymatic) 
+		  conversion  between dsDNA and ssDNA can be monitored by the variation of the DNA length at 
+		  a constant stretching force [17,18].</p>
+		<p>For example, we used this multiplexed single-molecule  method to study the enzymatic activity of &lambda; 
+              Exonuclease [13], a homotrimeric, ringshaped enzyme required for recombination in bacteriophage &lambda;, 
+              which degrades each strand of duplex DNA in the 5' to 3' direction.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/EXO345.jpg" /></div>
+            <p>Some  of the individual &lambda; exonuclease enzyme molecules digest processively all 48knt  of the &lambda; phage 
+              DNA substrate. The digestion rate of the individual enzymes exhibits large  fluctuations. These 
+              fluctuations are partially dependent on the sequence of the &lambda; DNA. We calculate the variations 
+              in the enzymatic rate caused by the modulation on the free energy required to melt the cleaved 
+              bases (green trace*) and compare it to the average of multiple single-molecule rate traces (black 
+              trace). The high degree of correlation identifies the base melting as a rate-limiting step in the 
+              catalytic cycle.</p>
+		<p>We  note that many single molecule assays are based on optical tweezers and magnetic tweezers&nbsp; on nucleic acid enzymes and molecule motors,  which were pioneered by the David Bensimon/Vincent Croquette [18], Steve Block [19], Carlos Bustamante [17], and Toshio Yanagida [2] groups.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>H.P. Lu, L. Xun, X.S. Xie. Science 282, 1877 (1998).</li>
+			<li>Funatsu T., et al. Nature 374, 555 (1995).</li>
+			<li>M.J. Levene, J. Korlach, S.W. Turner, M. Foquet, H.G. Graighead, W.W. Webb. Science 299, 682&ndash;686 (2003).</li>
+			<li>T. Ha, et al. PNAS 96, 893&ndash;898 (1999).</li>
+			<li>X. Zhuang, et al. Science 288, 2048&ndash;2051 (2000).</li>
+			<li>C. Yu, D. Hu, E.R. Vorpagel, H.P. Lu. J. Phys. Chem. B. 107, 7947 (2003).</li>
+			<li>R. Yasuda, H. Noji, K. Kinosita, M.Yoshida. Cell, 93, 1117 (1998).</li>
+			<li>A. Yildiz, J. N. Forkey, S. A. McKinney, T. Ha, Y. E. Goldman, P.R. Selvin. Science 300, 2016, (2003).</li>
+			<li>G. Luo, et al., PNAS 104, 12610&ndash;12615 (2007).</li>
+			<li>L. Edman et al. Chem. Phys. 247, 11&ndash;22 (1999).</li>
+			<li>B. English, et al. Nat. Chem. Biol. 2, 87&ndash;94 (2006).</li>
+			<li>K. Velonia, O. Flomenbom, D. Loos, S. Masuo, M. Cotlet, Y. Engelborghs, J. Hofkens, A.E. Rowan, J. Klafter, R.J.M. Nolte, F.C. de Schryver. Angew. Chem. Int. Ed. (2004) 43, 2&ndash;6 (2005).</li>
+			<li>A.M. van Oijen, P.C.&nbsp;Blainey, D.J. Crampton, C.C. Richardson, T. Ellenberger, X.S. Xie. Science 301, 1235 (2003).</li>
+			<li>C.M. Schroeder, P.C. Blainey, S. Kim, X.S. Xie. In &quot;Single Molecule Techniques A Laboratory Manual&quot; edited by P.R. Selvin and T. Ha, p 461-492, Cold Spring Harbor Laboratory Press, 2008.</li>
+			<li>S. Kim, P.C. Blainey, C.M. Schroeder, X.S. Xie. Nature Methods, 4, 397-399 (2007).</li>
+			<li>S.B. Smith, L. Finzi, C. Bustamante. Science 258, 1122 (1992).</li>
+			<li>G.J.L. Wuite, S.B. Smith, M. Young, D. Keller, C. Bustamante. Nature 404, 103 (2000).</li>
+			<li>B. Maier, D. Bensimon, V. Croquette. PNAS 97, 12002 (2000).</li>
+			<li>K. Svoboda, C.F. Schmidt, B.J. Schnapp, S.M. Block. Nature, 365, 721 (1993).</li>
+        </ol>
+
+		<hr>
+		<p><a name="non_specific_dna_protein_interactions"></a></p>
+		<p><h3 id="non_specific_dna_protein_interactions">Non-Specific DNA-Protein Interactions</h3></p>
+		<p><h5 class="subheader">DNA repair proteins slide in contact with DNA to find defect bases</h5></p>
+		<p>Many DNA-binding proteins need to locate target sites in DNA very quickly. These proteins face a difficult needle-in-a-haystack problem: the rare target sites are hidden among billions of nonspecific sites in a large DNA genome. These proteins are thought to solve the search problem through a combination of &quot;hopping&quot; among different DNA segments and &quot;sliding&quot; along DNA segments. While there exists evidence for diffusion of proteins along DNA [1], it has not been clear if this took place exclusively by hopping or whether the proteins can slide in contact with the DNA.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SLIDING_2_2.jpg" /></div>
+		<p>We have combined the DNA flow-stretching assay with single-molecule fluorescence detection to monitor single fluorescently-labeled DNA-binding proteins interacting with stretched DNA molecules in real-time [2]. For these measurements, we do not add a bead to the free end of the DNA. Using wide-field total internal reflection fluorescence microscopy, we can image the DNA-bound protein molecules while minimizing the fluorescence background from protein molecules in solution.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SLIDING_1.jpg" /></div>
+		<p>Oxoguanine (OxoG) is a highly mutagenic DNA lesion formed in cells when free radicals react with DNA [3]. With colleagues from Greg Verdine's Group, we investigated the search behavior of human oxoguanine DNA glycosylase 1 (hOgg1), the DNA repair protein that initiates repair of OxoG (structure* shown below). To prevent harmful genetic changes from occurring in our bodies, hOgg1 must find and initiate repair of OxoG quickly.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SLIDING_3.jpg" /></div>
+		<p>We label hOgg1 with the fluorescent dye Cy3B at the protein's C-terminus. When a small amount of the labeled protein is added to the flow solution, we observe that the DNA repair enzymes attach to and move along the flow-stretched DNA strands. Over the course of a few minutes we see hundreds to thousands of protein molecules attach to, move along, and dissociate from each DNA strand in the field of view. By determining the positions of the molecules in each frame of a recorded movie, we can trace out the path each protein molecule took as it moved along DNA searching for OxoG.</p>
+		<div class="row text-center">
+			<div class="large-6 columns">
+				<img src="{{MEDIA_URL}}research/SLIDING_4.jpg" />
+				<video width="320" height="28" autoplay="autoplay" loop>
+					<source src="{{MEDIA_URL}}research/blaineymovieS1.mp4" type="video/mp4">
+					<source src="{{MEDIA_URL}}research/blaineymovieS1.ogg" type="video/ogg">
+					Your browser does not support HTML5 video.
+				</video>
+			</div>
+			<div class="large-6 columns">
+				<img src="{{MEDIA_URL}}research/SLIDING_5.jpg" >
+			</div>
+		</div>
+		<p>Using many such molecular trajectories, we can construct population-averaged mean-square displacement plots to accurately measure the protein's diffusion constant under a given buffer condition.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/SLIDING_6.jpg"></div>
+		<p>hOgg1's diffusion constant is independent of salt concentration. Since a protein hopping along DNA would appear to diffuse much more quickly as its binding to DNA is weakened by increasing salt, we conclude the hOgg1 diffuses rapidly along DNA while maintaining persistent contact, <em>literally sliding along the DNA</em>. hOgg1's sliding activity is also pH-dependent. The fast one-dimensional sliding (<i>D</i> &gt; 5,000,000 bp<sup>2</sup>/s) observed at higher pH requires the presence of a certain amino acid (histidine 270) on the part of the protein that contacts DNA.</p>
+		<p>Nonspecifically bound proteins spin while diffusing along DNA</p>
+		<p>As discussed above, we experimentally observed that DNA-binding proteins can slide along the DNA helix while searching for specific binding sites, but their path of motion remains obscure. Do these proteins undergo simple one-dimensional (1D) translational diffusion, or do they rotate to maintain a specific orientation with respect to the DNA helix? We experimentally measured the apparent 1D diffusion constants as a function of protein size while maintaining the DNA-protein interface [4].</p>
+		<p>If the protein undergoes one dimensional diffusion along the axis of the DNA, according to hydordynamics [5], the diffusion constant should be</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/sliding_formula1.jpg" /></div>
+		<p>where <i>R</i> is the radius of the protein and <em>&#951;</em> is the viscosity.</p>
+		<p>If the protein undergoes rotation-coupled translational diffusion as if going along a barbers pole, a theory by Bagchi et al [6] predicted</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/sliding_formula2.jpg" alt="" width="321" height="50" /></div>
+		<p>where <i>b</i> is the helical pitch of DNA and <em>&#949;</em> is the protein binding energy fluctuation along DNA, and <i>R<sub>oc</sub></i> is defined in the figure below.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Translation_curve.jpg" width="690" height="330"></div>
+		<p class="style9">As shown in the above figure, the size dependence of the measured apparent 1D diffusion constants indicates that DNA-binding proteins undergo rotation-coupled sliding along the DNA helix rather than sheer translation [4]. The fact that eight proteins of varying size are consistent with the theory of spinning along the DNA helix in a rugged free-energy landscape [6] indicates that rotation-coupled sliding is a general phenomenon. The average free-energy barrier <em>&#949;</em> is 1.1 &plusmn; 0.2 <i>k<sub>B</sub>T</i>. Such small barriers facilitate rapid search for binding sites.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Berg, O.G.; Winter, R.B; von Hippel, P.H. &quot;Diffusion-Driven Mechanisms of Protein Translocation on Nucleic Acids. 1. Models and Theory?&quot; Biochemistry 20, 6929 (1981).</li>
+			<li>Blainey, P. C.; van Oijen, A. M.; Banerjee, A.; Verdine, G. L.; Xie, X. S. &quot;A base-excision DNA-repair protein finds intrahelical lesion bases by fast sliding in contact with DNA,&quot; Proc. Natl. Aca. Sci., 103, 5752-5757 (2006).</li>
+			<li>Bruner, S. D.; Norman, D. P. G.; Verdine, G. L. &quot;Structural Basis for Recognition and Repair of the Endogenous Mutagen 8-oxoguanine in DNA,&quot; Nature 403, 859-866 (2000).
+			<li>Blainey, P. C.; L.Guobin; Kou, S.C.; Mangel, W. F.; Verdine, G. L.; Bagchi, B.; Xie, X. S. &quot;Nonspecifically bound proteins spin while diffusing along DNA&quot; Nature Structural &amp; Molecular Biology, 16, 1224-1229 (2009).</li>
+			<li>Schurr, J.M. &quot;The one-dimensional diffusion coefficient of proteins absorbed on DNA. Hydrodynamic considerations,&quot;Biophys. Chem. 9, 413&ndash;414 (1979).</li>
+			<li>Bagchi, B.; Blainey, P. C.; Xie, X. S. &quot;Diffusion Constant of a Nonspecifically Bound Protein Undergoing Curvilinear Motion along DNA,&quot; J.Phys.Chem.B, 112, 6282-6284 (2008).</li>
+		</ol>
+
+		<p><a name="allostery_through_dna"></a></p>
+		<p><h3 id="allostery_through_dna">Allostery Through DNA</h3></p>
+		<p>DNA encodes genetic information as a string of base sequences in a double-helical structure. The base sequence encodes not only genes whose expression determine cell functions, but also provides specific binding sites for proteins, called transcription factors, whose binding and unbinding to DNA control gene expression levels based on environmental signals.</p>
+		<p>We have uncovered a physical property of DNA, called allostery, which affects DNA-protein interactions. Allostery means that binding of a molecule on one part of a macromolecule affects the binding of another molecule at a distal site of the macromolecule. Such a long-range effect within a macromolecule has been extensively studied for enzymes or proteins (<em>1,2</em>), but has not been quantitatively characterized or mechanically (<em>3-7</em>). If DNA is completely rigid or completely floppy, the binding of one protein would be independent of the presence of another DNA-bound protein nearby.</p>
+		<p>We measured how long a protein binds on its DNA-binding site before it falls off, or the mean residence time, which is also the inverse of the dissociation rate constant (<sup><em>k</em></sup><em>off</em>). The protein was labeled with a fluorescent dye. By using single-molecule fluorescence microscopy based on total internal reflection illumination, we could monitor individual protein dissociation events from a few hundred DNA templates simultaneously. We designed DNA sequences such that there are two protein-binding sites with varying separation (<em>L</em>). One binding site was for the fluorescently labeled protein and the other binding site was for a different type of DNA-binding protein that is not labeled (Fig. 1A for a fluorescently labeled DNA-binding domain of glucocorticoid receptor, or GRDBD on its binding site, GRE, and BamHI).</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/allostery_1.jpg" /></div>
+		<blockquote class="text-center"><p>Figure 1</p></blockquote>
+		<p>Our experiment showed that two DNA-binding proteins can affect each other's binding affinity to DNA at a distance in such a way that their binding is either simultaneously enhanced or reduced (Fig. 1B). The long-range effect not only varies as a function of the distance between two protein-binding sequences, but also oscillates between the enhancement and reduction with the magic 10 base period, dictated by the famous double helical structure of DNA. It is a rather large effect (about five-fold change) that decays within ~15 base pairs, previously hidden in conventional ensemble experiments. Also, such an allosteric property of DNA is general, true for any protein pairs we examined (8). This is significant as multiple proteins, such as transcription factors and RNA polymerase, often bind close to each other on genomic DNA to carry out their cellular functions in concert.</p>
+		<p>We performed various control experiments to verify that such a change truly comes from DNA allostery. The key experiment was performed with DNA hairpin: we designed DNA to have a hairpin loop (a single-stranded, unpaired region of DNA) at one end of the double-stranded DNA and placed a binding site for the fluorescently labeled protein near the hairpin loop. We discovered that the residence time of the protein was also altered by its distance to the hairpin loop (Fig. 1C). We know that a hairpin loop creates distortion in the double helical structure of DNA. This experiment ruled out the possibility of direct protein-protein interaction as the origin of the observed behavior and suggests that the distortion of DNA double helix can propagate along the DNA and affect binding of a protein at a distal site.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/allostery_2.jpg" width="500"/></div>
+		<blockquote class="text-center"><p>Figure 2</p></blockquote>
+		<p>To understand the mechanism for the long-range effect through DNA, think of the DNA-bound proteins as monkeys and DNA as a monkey bar (Fig. 2). Two monkeys hang on a monkey bar, trying hard to hold their grip. Interestingly, the time a monkey stays on the bar is affected by the presence of another monkey hanging nearby. Imagine the binding of the first monkey widens the separation between the blue and red strands (analogy to the major groove width). Such distortion of the rope structure will propagate along the rope. If the second monkey sits nearby at a place where the gap between the blue and red strand is widened, it is easier to stay put as it doesn't have to work as hard to widen the two strands! On the other hand, if the second monkey sits at a place where the gap between the two strands is narrowed, it is difficult to stay put there!</p>
+		<p>We demonstrated that DNA allostery indeed affects gene expression inside live cells and transcription factor binding near nucleosomes. Hence, DNA allostery is physiologically important, and future studies must take this into account.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>J. Monod, J. Wyman, J. P. Changeux, <em>J. Mol. Biol. </em>12, 88 (1965).</li>
+			<li>D. E. Koshland, G. N&eacute;methy, D. Filmer, <em>Biochemistry </em>5, 365 (1966).</li>
+			<li>F. M. Pohl, T. M. Jovin, W. Baehr, J. J. Holbrook, <em>Proc. Natl. Acad. Sci. U.S.A. </em>69, 3805 (1972).</li>
+			<li>M. Hogan, N. Dattagupta, D. M. Crothers, <em>Nature </em>278, 521 (1979).</li>
+			<li>R. Moretti <em>et al.</em>, <em>ACS Chem. Biol. </em>3, 220 (2008).</li>
+			<li>E. F. Koslover, A. J. Spakowitz, <em>Phys. Rev. Lett. </em>102, 178102 (2009).</li>
+			<li>Hernan G. Garcia <em>et al.</em>, <em>Cell Reports </em>2, 150 (2012).</li>
+			<li>S. Kim <em>et al.</em>, <em>Science </em>339, 816 (2013).</li>
+		</ol>
+	</div>
+{% endblock %}

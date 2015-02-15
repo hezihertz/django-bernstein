@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block sub_tags %}
+	<ul id="sticky-nav" class="sub-nav">
+		<li><a href="#single_molecule_absorption_detection">SM Absorption Detection</a></li>
+		<li><a href="#stimulated_emission_microscopy">Stimulated Emission Microscopy</a></li>
+	</ul>
+{% endblock %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+		<p><a name="single_molecule_absorption_detection"></a></p>
+		<p><h3 id="single_molecule_absorption_detection">Single Molecule Absorption Detection</h3></p>
+		<p>Single-molecule optical detection at room temperature dates back to 1976 when Hirschfeld reported the use of an optical microscope to reduce probe volume, and hence the background signal (1). He was able to detect individual immobilized protein molecules labeled with tens of fluorophores, demonstrating a single-molecule line-scan image. Similar use of optical microscopes finally allowed single fluorophore sensitivity at room temperature in 1990 (2,3). It has remained the method of choice for detecting and imaging single molecules in ambient environments to the present.</p>
+		<p>Among the methods that subsequently emerged, single chromophore detection was first achieved by optical absorption measurement at 1.6K with a sophisticated frequency modulation scheme in 1989 (4). This measurement relied on the large absorption cross-section of the zero-phonon line. It was soon followed by fluorescence detection via excitation at the zero-phonon line, which offered much higher sensitivity by virtue of background free emission detection (5). These methods, however, were limited only to cryogenic temperatures at which zero-phonon lines exist for a handful of molecules. </p>
+		<p>Imaging of single fluorophores at room temperature was first accomplished with near-field microscopy in 1993 (6). Our group was fortunate to participate in the early development (7,8). However, near-field single molecule imaging had limited applications because of the complexity and perturbation of the near-field probes, and was soon surpassed by much easier far-field single molecule imaging with total internal reflection (9) and confocal microscopy (10,11).</p>
+		<p>Many molecules in nature absorb but do not fluoresce. This is why many groups around the world have been attempting detection of single-molecule absorption at room temperature in the past twenty years. Recently, three groups simultaneously reported three different approaches that allow the detection of individual molecules through their absorption of visible light (12-14). Sangdoghdar and coworkers relied on direct attenuation measurement by using balanced detection to minimize intensity fluctuations and selecting samples with minimal scattering (12). Orrit and coworkers used a photothermal method in a pump-probe setup (13). </p>
+		<p>Our group demonstrated the detection of room-temperature single-molecule absorption by ground-state depletion microscopy (14). This is accomplished by using two tightly-focused collinear continuous-wave laser beams at different wavelengths both within a molecular absorption band, one of which is intensity-modulated at a high frequency (&gt;MHz). The transmission of the other beam is modulated at the same frequency due to ground state depletion. The signal of single chromophore molecules scanned across the common laser foci can be detected with shot-noise limited sensitivity. Our method provides absorption-like contrast free from the complication of sample scattering. The overall quadratic power dependence of the ground-state depletion signal would allow three-dimensional sectioning.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/GroundstateDepletion.jpg" alt=""></div>
+		<blockquote>
+			<p><strong>Ground-state depletion microspectroscopy of single molecules.</strong> (a) Experimental setup for the simultaneous ground-state depletion and epi-fluorescence detection. The inset indicates single-molecule absorption cross section <em>&sigma;</em> and the cross section of a tightly focused laser beam <em>S</em>. (b) Energy diagram of ground-state depletion. (c) Fluorescence line scans for a single molecule, averaged from the inset before (red) and after (blue) photobleaching. The inset is the fluorescence image constructed from repeated line scans across the molecule and the corresponding fluorescence intensity trajectory. (d) Absorption line scans for the same molecule, averaged before (red) and after (blue) photobleaching.</p>
+		</blockquote>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Hirschfeld, T. Optical Microscopic Observation of Single Small Molecules. <em>Appl. Opt. </em>1976, <em>15</em>, 2965&ndash;2966.</li>
+			<li>Shera, B. E.; Seitzinger, N. K.; Davis, L. M.; Keller, R. A.; Soper, S. A. Detection of Single Fluorescent Molecules. <em>Chem. Phys. Lett.</em> 1990, <em>174</em>, 553&ndash;557.</li>
+			<li>Rigler, R.; Widengren, J. Ultrasensitive Detection of Single Molecules by Fluorescence Correlation Spectroscopy. <em>BioScience</em> 1990, <em>3</em>, 180&ndash;183.</li>
+			<li>Moerner, W. E.; Kador, L. Optical Detection and Spectroscopy of Single Molecules in a Solid. <em>Phys. Rev. Lett.</em> 1989, <em>62</em>, 2535&ndash;2538.</li>
+			<li>Orrit, M.; Bernard, J. Single Pentacene Molecules Detected by Fluorescence Excitation in a p-Terphenyl Crystal. <em>Phys. Rev. Lett.</em> 1990, <em>65</em>, 2716&ndash;2719.</li>
+			<li>Betzig, E.; Chichester, R. J. Single Molecules Observed by Near-Field Scanning Optical Microscopy. <em>Science</em> 1993, <em>262</em>, 1422&ndash;1425.</li>
+			<li>Xie, X. Sunney; Dunn, Robert C. &quot;Probing Single Molecule Dynamics,&quot; <em>Science</em>&nbsp;1994, 265, 361.</li>
+			<li>Ambrose, W.P.; Goodwin, P.M.; Keller, R.A.; Martin J.C. &ldquo;Alterations of Single Molecule Fluorescence Lifetimes in Near-Field Optical Microscopy,&rdquo; <em>Science</em> 1994, 265. 364-367.</li>
+			<li>Funatsu, T.; Harada, Y.; Tokunaga, M.; Salto, K.; Yanagida, T. Imaging of Single Fluorescent Molecules and Individual ATP Turnovers by Single Myosin Molecules in Aqueous Solution. <em>Nature </em>1995, <em>374</em>, 555&ndash;559.</li>
+			<li>Macklin, J. J.; Trautman, J. K.; Harris, T. D.; Brus, L. E. Imaging and Time-Resolved Spectroscopy of Single Molecules at an Interface. <em>Science </em>1996, <em>272</em>, 255&ndash;258.</li>
+			<li>ie, X. S.; Trautman, J. K. Optical Studies of Single Molecules at Room Temperature. <em>Annu. Rev. Phys. Chem.</em> 1998, <em>49</em>, 441&ndash;480.</li>
+			<li>Kukura, P., Celebrano, M., Renn, A. &amp; Sandoghdar, V. SingleMolecule Sensitivity in Optical Absorption at Room Temperature. <em>J. Phys. Chem. Lett.</em> 2010, <em>1</em>, 3323&ndash;3327.</li>
+			<li>Gaiduk, A.; Yorulmaz, M.; Ruijgrok, P. V.; Orrit, M. RoomTemperature Detection of a Single Molecule's Absorption by Photothermal Contrast. <em>Science</em> 2010, <em>330</em>, 353&ndash;356.</li>
+			<li>Chong, S., Min, W. &amp; Xie, X. S. Ground-State Depletion Microscopy: Detection Sensitivity of Single-Molecule Optical Absorption at Room Temperature J. Phys. Chem.<em> Lett. </em>2010, <em>1</em>, 3316&ndash;3322.</li>
+		</ol>
+
+		<hr>
+		<p><a name="stimulated_emission_microscopy"></a></p>
+		<p><h3 id="stimulated_emission_microscopy">Stimulated Emission Microscopy</h3></p>
+		<p>The colorful world around us as seen through our eyes is primarily due to absorption contrast &ndash; molecules absorb light of certain colors because of their intrinsic energy levels. Incident white light contains all colors.&nbsp; Molecules absorb some colors, allowing us to see the colors of the remaining light. An exception is the blue sky, which is due to light scattering induced by small particles and/or air density fluctuation. </p>
+		<p> Under an optical microscope, however, absorption contrast is not the method of choice for visualization for two reasons: first, absorption is too weak to measure because of the small number of molecules in a microscopic sample (the signal is much weaker than those in a conventional UV-vis spectrometer, the sensitivity limit of which is about one part per ten thousand light attenuation). Second, light scattering complicates the absorption signal as both effects result in light attenuation. For these reasons, fluorescence microscopy has been the dominant contrast mechanism for optical microscopy. </p>
+		<p> Many important molecules, such as hemoglobin, cytochrome, melanin, and retinal, absorb but have undetectable fluorescence, yet their absorption is too weak to detect under a normal microscope. In 2009, we demonstrated stimulated emission microscopy (1,2) by exploiting stimulated emission, a phenomenon that was first described by Albert Einstein and was the basis for LASER, but had not been used as a contrast mechanism for optical imaging.&nbsp; Stimulated emission microscopy allows orders of magnitude higher sensitivity for imaging molecules that absorb, but do not fluoresce. It allows spectroscopic identification of molecules in living organisms and is free from the complication of light scattering by the sample. The sensitivity that approaches the single molecule limit was accomplished by the modulation transfer measurement (3).</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/stimulatedemissionmicroscopy.jpg" alt=""></div>
+		<blockquote>
+			<p><strong>Stimulated emission microscopy. </strong>(a) Energy diagram of stimulated emission. (b) A pair of stimulated emission images of toluidine blue O, a drug used as a photosensitizer in photodynamic therapy, at two different z depths (3 and 25&mu;m, respectively), delivered onto a mouse ear. Optical sectioning is evident. (c) Stimulated emission images of genetically encoded nonfluorescent chromoproteins, gtCP and cjBlue, inside Escherichia coli cells that contain corresponding expression plasmids. </p>
+		</blockquote>
+		<p>We note that Warren Warren&rsquo;s group used the modulation transfer approach to achieve nonlinear imaging based on two photon absorption (4) and excited state absorption (5) contrast. Together with these techniques, stimulated emission microscopy opens new possibilities for biomedical imaging, such as label free mapping drug distributions and blood vessels in tissues, as demonstrated by the paper.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Min, W.; Lu, S.; Chong, S.; Roy, R.; Holtom, G. R.; Xie, X. S. Imaging Chromophores with Undetectable Fluorescence by Stimulated Emission Microscopy. <em>Nature</em> 2009, <em>461</em>, 1105.</li>
+			<li>News and Views by Hell, Stefan; Rittweger, Eva. &quot;Light from the Dark,&quot; <em>Nature</em>, 461, 1069.</li>
+			<li>Min, Wei; Freudiger, Christian W.; Lu, Sijia; Xie, X. Sunney &quot;Coherent Nonlinear Optical Imaging: Beyond Fluorescence Microscopy,&quot; <em>Annu Rev Phys Chem</em> 62, 507-530 (2011).</li>
+			<li>Ye, T.; Fu, D.; Warren W.S. &ldquo;Nonlinear absorption microscopy,&rdquo; <em>Photchem. Photobiol.</em> 85, 631-45.</li>
+			<li>Fu, D.; Ye, T.; Matthews, T.E.; Yurtsever, G.; Warren, W.S. &ldquo;Two-color, two-photon, and excited-state absorption microscopy&rdquo; <em>J. Biomed. Opt.</em> 12:054004</li>
+		</ol>
+
+</div>
+{% endblock %}

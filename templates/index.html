@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<p><h2>Welcome to Xie Group</h2></p>
+<hr>
+<div class="row">
+<div class="large-12 columns">
+<p>We are a group of scientists working at the interface of several disciplines, striving to develop new physical and chemical tools to solve compelling biological problems.</p></div>
+</div>
+<div class="row">
+<div class="large-6 columns">
+<p>Advances in life sciences over the past sixty years can best be described as understanding life processes at the molecular level. We have now sequenced the genomes of many species, including humans, and obtained high-resolution structures of many macromolecular machines. What are the new challenges? Well, there are many. One challenge, in particular, is to study how molecular machineries actually work – how they work in real time, how they work individually, how they work together, and finally, how they work inside live cells. How does genetic information carried by DNA control cell functions?</p>
+<p>With a wealth of physical and chemical tools at our disposal, our group is excited to make both scientific and technological contributions to life science.</p>
+</div>
+<div class="large-6 columns">
+<ul data-orbit>
+	<li>
+	  <a href="{{MEDIA_URL}}news/BTN_A_000114153_O_232274a-2.pdf"><img src="{{MEDIA_URL}}home/1.png"/></a>
+	  <div class="orbit-caption">
+		Following a Hunch.
+	  </div>
+	</li>
+	<li>
+	  <a href="{{MEDIA_URL}}news/nmeth.2768.pdf"><img src="{{MEDIA_URL}}home/2.png"></a>
+	  <div class="orbit-caption">
+		METHOD OF THE YEAR &mdash; Single Cell Sequencing.
+	  </div>
+	</li>
+	<li>
+	  <a href="http://www.nature.com/news/non-invasive-method-devised-to-sequence-dna-of-human-eggs-1.14412"><img src="{{MEDIA_URL}}home/3.png" /></a>
+	  <div class="orbit-caption">
+		Non-invasive method devised to sequence DNA of human eggs.
+	  </div>
+	</li>
+	<li class="active">
+	  <a href="/people/"><img src="{{MEDIA_URL}}home/welcome.png" /></a>
+	  <div class="orbit-caption">
+		Welcome to Xie Group.
+	  </div>
+	</li>
+</ul>
+</div>
+</div>
+
+	<script src="{{ STATIC_URL }}foundation/js/foundation/foundation.orbit.js"></script>
+	<script>
+		$(document).foundation({
+			orbit: {
+				animation: 'slide',
+				timer: true,
+				timer_speed: 3000,
+				animation_speed: 500,
+				slide_number: true,
+				pause_on_hover: false,
+				navigation_arrows: true,
+				variable_height: false,
+				bullets: true
+			}
+		});
+	</script>
+
+{% endblock %}

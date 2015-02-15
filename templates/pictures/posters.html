@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="large-9 columns article-content" role="content">
+
+{% if posters %}
+	<h3>Open House Posters</h3>
+	<ul class="large-block-grid-5 medium-block-grid-4 small-block-grid-3">
+	{% for m in posters %}
+		<li>
+			<div>{{m.year}}</div>
+			<a class="th" href="{{m.full_image.url}}">
+				<img src="{{m.thumbnail.url}}">
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+{% endif %}
+
+{% endblock %}
+

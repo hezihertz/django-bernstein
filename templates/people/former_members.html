@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="large-9 columns article-content" role="content">
+
+{% if grad_students %}
+	<h3>Graduate Students</h3>
+	<table>
+	{% for m in grad_students %}
+		<tr>
+			{% if m.current_website %}
+			<td width="200"><a href="{{m.current_website}}">{{m.first_name}} {{m.last_name}}</a></td>
+			{% else %}
+			<td width="200">{{m.first_name}} {{m.last_name}}</td>
+			{% endif %}
+			<td width="100">{{m.lab_period}}</td>
+			<td width="500">{{m.current_association}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+{% if postdocs %}
+	<h3>Postdoctoral Fellows</h3>
+	<table>
+	{% for m in postdocs %}
+		<tr>
+			{% if m.current_website %}
+			<td width="200"><a href="{{m.current_website}}">{{m.personal_title|default_if_none:""}} {{m.first_name}} {{m.last_name}}</a></td>
+			{% else %}
+			<td width="200">{{m.personal_title|default_if_none:""}} {{m.first_name}} {{m.last_name}}</td>
+			{% endif %}
+			<td width="100">{{m.lab_period}}</td>
+			<td width="500">{{m.current_association}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+{% if visiting_scholars %}
+	<h3>Visiting Scholars</h3>
+	<table>
+	{% for m in visiting_scholars %}
+		<tr>
+			{% if m.current_website %}
+			<td width="200"><a href="{{m.current_website}}">{{m.personal_title|default_if_none:""}} {{m.first_name}} {{m.last_name}}</a></td>
+			{% else %}
+			<td width="200">{{m.personal_title|default_if_none:""}} {{m.first_name}} {{m.last_name}}</td>
+			{% endif %}
+			<td width="100">{{m.lab_period}}</td>
+			<td width="500">{{m.current_association}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+{% if research_assistants%}
+	<h3>Research Assistants</h3>
+	<table>
+	{% for m in research_assistants %}
+		<tr>
+			{% if m.current_website %}
+			<td width="200"><a href="{{m.current_website}}">{{m.personal_title|default_if_none:""}} {{m.first_name}} {{m.last_name}}</a></td>
+			{% else %}
+			<td width="200">{{m.personal_title|default_if_none:""}} {{m.first_name}} {{m.last_name}}</td>
+			{% endif %}
+			<td width="100">{{m.lab_period}}</td>
+			<td width="500">{{m.current_association}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+{% if undergrads %}
+	<h3>Undergraduate Students</h3>
+	<table>
+	{% for m in undergrads %}
+		<tr>
+			{% if m.current_website %}
+			<td width="200"><a href="{{m.current_website}}">{{m.first_name}} {{m.last_name}}</a></td>
+			{% else %}
+			<td width="200">{{m.first_name}} {{m.last_name}}</td>
+			{% endif %}
+			<td width="100">{{m.lab_period}}</td>
+			<td width="500">{{m.current_association}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endif %}
+
+{% endblock %}
+

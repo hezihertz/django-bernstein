@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<p><h3>Contact Info</h3></p>
+<div class="large-5 columns">
+	<p><h5>Professor Xiaoliang Sunney Xie</h5></p>
+	<p>Harvard University<br>
+	Department of Chemistry &amp; Chemical Biology<br>
+	12 Oxford Street<br>
+	Cambridge, MA 02138<br>
+	Phone: (617) 496-9925<br>
+	Fax: (617) 496-8709<br>
+	Email: xie@chemistry.harvard.edu</p>
+	<hr>
+	<p><h5>Lawrence Valles</h5></p>
+	<p>Laboratory Manager<br>
+	Phone: 617-496-6501<br>
+	Email: lvalles@chemistry.harvard.edu</p>
+</div>
+<div id="map-canvas" class="large-7 columns hide-for-small"></div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuFKH8TiRAYQbL_Zd_ymyw-7aoXP4KFHg"></script>
+<script src="{{ STATIC_URL }}customize/googlemaps.js"></script>
+{% endblock %}

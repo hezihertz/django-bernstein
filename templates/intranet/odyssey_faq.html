@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<div class="large-9 columns article-content">
+<h3>Odyssey FAQ</h3>
+	<h5>Using Harvard's Odyssey Cluster</h5>
+	<p>Harvard maintains a large compute cluster that members of the lab can use for data
+	analysis. Our lab also has 20 TB (as of 9/22/11) of dedicated storage available for our
+	use on the cluster. This page describes how to configure your odyssey account and
+	perform common tasks. You can find more information at <a
+	href="http://rc.fas.harvard.edu/">http://rc.fas.harvard.edu/</a>.</p>
+	<h5>Getting an Odyssey Account</h5>
+	<p>Fill out the form at <a
+	href="http://rc.fas.harvard.edu/request">http://rc.fas.harvard.edu/request</a>. An account will
+	usually be setup for you  within one business day, and you will receive an email instructing you
+	how to  setup your SecurID and password.</p>
+	<h5>Logging in and running GUI applications</h5>
+	<p>You can log into Odyssey using PuTTY (<a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a>).
+You can run graphical applications on Odyssey and have them display on your local computer.
+For Windows, download and install Xming and Xming-fonts from <a
+href="http://www.straightrunning.com/XmingNotes/">http://www.straightrunning.com/XmingNotes/</a>
+(under Public Domain Releases). You'll need to have Xming running in your system tray to use
+GUI applications remotely. You'll also need to select &quot;Enable X11 Forwarding&quot; in
+PuTTY under Connection-&gt;SSH-&gt;X11.</p>
+	<h5>General resources for getting started</h5>
+	<p>If you are new to Linux, read through <a
+	href="http://linuxcommand.org/">http://linuxcommand.org/</a> There are a couple Odyssey-specific
+	guides at <a href="http://rc.fas.harvard.edu/new">http://rc.fas.harvard.edu/new</a></p>
+	<h5>Transferring data to and from Odyssey</h5>
+	<p>You have a few options. You can create a mapped drive to your home folder on Odyssey as
+	described at <a href="http://rc.fas.harvard.edu/faq/map">http://rc.fas.harvard.edu/faq/map</a>.
+	Alternatively, you can use an FTP client such as Secure FX (available at <a
+	href="http://downloads.fas.harvard.edu/download">http://downloads.fas.harvard.edu/download</a>
+	with directions for connecting at <a
+	href="http://rc.fas.harvard.edu/faq/x11">http://rc.fas.harvard.edu/faq/x11</a> halfway down the
+	page).</p>
+	<h5>Software available on Odyssey</h5>
+	<p>There is a list of all the software modules available on  Odyssey at <a
+	href="http://rc.fas.harvard.edu/faq/modulelist">http://rc.fas.harvard.edu/faq/modulelist</a>.
+	You need to load the modules you want before you can use them. For example, to use Matlab
+	R2011b, type &quot;module load math/matlab-R2011b&quot;. Then you can run Matlab by simply
+	typing &quot;matlab&quot; at the shell prompt. Note that computationally expensive programs
+	should not be run on the head nodes (see below).</p>
+	<h5>Running computationally expensive programs and distributing jobs</h5>
+	<p>When you log into Odyssey, you are on a head node that is shared by many users and is only
+	intended for light use, such as editing files and submitting jobs. If you want to run something
+	more demanding, you have two options:</p>
+	<p>If you just one to run one job, just run &quot;bsub -q
+	interact -Is bash&quot;, which will log you in to a node designated for heavier use.</p>
+	<p>If you want to submit multiple jobs to run in parallel, you'll need to learn how to use the
+	LSF job management system (<a
+	href="http://rc.fas.harvard.edu/faq/lsf">http://rc.fas.harvard.edu/faq/lsf</a>).</p>
+	<h5>Useful Linux tips</h5>
+	<p><em>Text editors</em>: For a general text editor learn to use Emacs (see <a
+	href="http://jeremy.zawodny.com/emacs/emacs.html">http://jeremy.zawodny.com/emacs/emacs.html</a>,
+	for example). The idea is that you should be able to do anything without using the mouse. It's
+		painful for a couple days, but it's worth it if you force yourself to only use keyboard
+		shortcuts. Some people prefer VI instead of Emacs.<p>
+	<p>
+	<em>Running programs in the background</em>: Normally when you launch a graphical program (like
+	Matlab), you can't use the command line again until the programs ends. To get around this, add
+	an ampersand at the end of the command to start the program (&quot;matlab&amp;&quot; for
+	example). If you forget to do this and later want to use the command line, type control-z to
+	pause the program and then &quot;bg&quot; to run it in the background.
+	</p>
+	<p>
+	<em>Automatically running commands after logging in</em>: There is a file called
+	&quot;.bashrc&quot; in your home  directory that is run whenever you log in. For
+	example, you can put &quot;module load ...&quot; statements in here for all the programs that
+	you frequently use. You can also define aliases here. For example, I use
+	&quot;alias interactive='bsub -q interact -Is bash'&quot; so that I can just type
+	&quot;interactive&quot; to get on to a dedicated compute node.
+	</p>
+</div>
+{% endblock %}
+
+
+

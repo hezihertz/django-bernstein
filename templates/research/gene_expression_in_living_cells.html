@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block sub_tags %}
+	<ul id="sticky-nav" class="sub-nav">
+		<li><a href="#probing_gene_expression">Gene Expression</a></li>
+		<li><a href="#transcription_factor_dynamics">Transcription Factor Dynamics</a></li>
+		<li><a href="#stochastic_event_cell_phenotype">Cell's Phenotype</a></li>
+		<li><a href="#single_cell_proteomics_and_transcriptomics">Proteomics &amp; Transcriptomics</a></li>
+		<li><a href="#single_molecule_imaging_nucleus">Imaging inside Live Cell Nucleus</a></li>
+		<li><a href="#singular_expression_of_olfactory_receptors">Olfactory Receptors</a></li>
+	</dl>
+{% endblock %}
+
+{% block main_content %}
+	<div class="large-9 columns article-content" role="content">
+		<p><a name="probing_gene_expression"></a></p>
+		<p><h3 id="probing_gene_expression">Probing Gene Expression</h3></p>
+		<p>Gene expression, a central process to all life, is stochastic because most genes often exist in one or two copies per cell. Although the central dogma of molecular biology has been proven beyond a doubt, due to insufficient sensitivity, stochastic protein production has not been visualized in real-time in an individual cell at the single-molecule level. We report the first direct observation of single protein molecules as they are generated, one at a time in a single live <em>E. coli </em>cell, providing a quantitative description about gene expression.</p>
+		<p>We used a fast maturing fluorescent protein called Venus as a gene expression reporter developed by Mya. We demonstrated a general strategy for measuring live-cell single-molecule fluorophores: detection by localization (Fig. 1) [1]. The key for achieving single molecule detection was to immobilize the fluorescent protein reporter on the cell membrane, by constructing a chimeric fluorescent protein reporter <em>tsr-venus </em>(Fig. 2A), which contains a membrane localization sequence. It is normally difficult to detect single protein molecules inside cytoplasm - their fluorescence is spread by fast diffusion to the entire cell during the image acquisition time, and overwhelmed by the strong cellular autofluorescence. However, molecules on cell membranes diffuse much slower, and therefore can be detected individually with our sensitive microscope. Using this approach, we recorded <a href="{{MEDIA_URL}}research/1119623clip.mp4">movies</a> of growing <em>E. coli </em>cells to study the real-time expression from the <em>lac </em>operon in repressed state in real-time (Fig. 2B).</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Probing_Gene_Expr1.jpg" /></div>
+		<blockquote>
+			<p align="justify" class="style10"><strong>Fig. 1</strong> Single-molecule detection of a fluorescent fusion protein, Tsr-Venus, in live E. coli cells. (A) Fluorescence and (B) DIC images of two E. coli cells expressing Tsr-Venus. Two single fusion protein molecules were detected as diffraction-limited fluorescent spots in the left cell. (C) Line cross section of the fluorescence signal along long axes of the two E. coli cells a.u., arbitrary units. (D) Fluorescence time trace of a single Tsr-Venus molecule in an E. coli cell, showing abrupt photobleaching. (E) Detection by localization. </p>
+		</blockquote>
+		<p>Transcription by RNA polymerase is initiated upon a stochastic dissociation event of the repressor from the operator region of DNA, generating one mRNA molecule. A burst of fusion protein molecules will be synthesized by multiple ribosome molecules bound to the mRNA, yielding fluctuating protein production in time. We observed that under the repressed condition protein molecules are produced in bursts, with each burst originating from a stochastically-transcribed single messenger RNA molecule, and that protein copy numbers in the bursts follow an exponential distribution.These observations were predicted only theoretically previously, accounted for by the competition between mRNA degradation by nuclease and translation by ribosome.</p>
+		<div class="row text-center">
+			<ul class="inline-list centered">
+			<li>
+				<div>A</div>
+				<img src="{{MEDIA_URL}}research/Probing_Gene_Expr2.jpg" />
+			</li>
+			<li>
+				<div>B</div>
+				<img src="{{MEDIA_URL}}research/probing_gene_expr1b.gif" />
+			</li>
+			<li>
+				<div>C</div>
+				<img src="{{MEDIA_URL}}research/ProbingGeneExpr.jpg" />
+			</li>
+			</ul>
+		</div>
+		<blockquote>
+			<p><strong>Fig. 2</strong> (A) Scheme of live-cell observations of gene expression. Transcription of one mRNA by an RNA polymerase results from an infrequent and transient dissociation event of repressor from DNA. Multiple copies of protein molecules are translated from the mRNA by ribosomes. Upon being assembled into E. coli's inner membrane, Tsr-Venus protein molecules can be detected individually by a fluorescence microscope. (B) A DIC/fluorescence overlay image of <em>E. coli </em>expressing Tsr-Venus from <em>lac </em>operon. Single Tsr-Venus molecules are shown in yellow dots. (C) Stochastic protein production bursts in different cell lineages, each burst is due to a single mRNA molecule.</p>
+		</blockquote>
+		<p>We simultaneously developed a different method using &beta;-glactosidase as a reporter [<em>2</em>] to probe gene expression in living cells with single protein molecule sensitivity: A single copy of &beta;-galactosidase generates many copies of fluorescence molecules when a cell trapped in a microfluidic device was treated with a fluorogenic substrate, resulting in enzymatic amplification in signal and single molecule sensitivity. This technique has been applied to probe gene expression from <em>E. coli </em>as well as individual budding yeast and mouse embryonic stem cells. Again protein production occurs in bursts with exponentially distributed protein copy numbers.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Probing_Gene_Expr3.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 3</strong> (A) Schematic diagram of the two-layer microfluidic chamber used for the enzymatic assay. Cells are trapped inside a volume of 100pl chamber. (B) Enzymatic reaction: hydrolysis of the synthetic substrate FDG by the &beta;-gal yields a fluorescent product, fluorescein. (C) Real-time detection of &beta;-gal production in a living cell. Discrete jumps in &beta;-gal number are due to burst-like production of proteins. (D) Histogram of copy number of &beta;-gal molecules per burst. The black line is the single exponential fit to the histogram.</p>
+		</blockquote>
+		<p>For each gene, the dynamics of the central dogma can be described by two parameters &mdash; the burst frequency, <em>a</em>, which is the number of bursts per cell cycle; and the burst size, <em>b</em>, which is the average number of molecules produced per burst. We determined <em>a</em> and <em>b</em> can be from the single-cell time traces, such as in Fig. 3. Under steady-state conditions, temporal fluctuations of gene expression in each cell lineage lead to variation in copy number in an isogenic population of cells. A typical copy-number distribution, which is often asymmetrical, is shown in Fig. 3. A rigorous mathematical relationship between fluctuations in expression and the distribution of protein copy number in a population of cells has been lacking in the literature. A log-normal function has often been used as a convenient phenomenological fit, but it offers no physical insight.</p>
+		<p>We proved that, under steady-state conditions with uncorrelated and exponentially distributed bursts, the protein copy-number distribution, <em>p(x)</em>, can be approximated as a gamma distribution (Fig.4), which has two parameters &mdash; <em>a</em> and <em>b</em>, as defined earlier. This allows extraction of intrinsic cellular parameters, <em>a</em> and <em>b</em> from fitting a gamma function to the measured <em>p(x)</em>. At low expression levels, the values for <em>a</em> and <em>b</em> determined in this way are consistent with those derived from the single-cell times traces.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/Probing_Gene_Expr4.jpg" ></div>
+		<blockquote>
+			<p><strong>Fig. 4</strong> Protein molecules are produced in bursts (red), in addition to existing molecules (blue), and diluted upon cell division, leading to a steady-state distribution, <em>p(x)</em>, of protein copy number, <em>x</em>, in a cell population with identical genome. <em>p(x)</em> is a Gamma function with two adjustable parameters, <em>a</em> and <em>b</em>, transcription burst frequency and burst size.</p>
+		</blockquote>
+		<p>Our single-molecule experiments have provided quantitative descriptions about gene expression in a live cell.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Yu, Ji; Xiao, Jie; Ren, Xiaojia; Lao, Kaiqin; Xie, X. Sunney; &quot;Probing gene expression in live cells, one protein molecule at a time,&quot; <em>Science</em>, 311, 1600-1603 (2006).&nbsp;</li>
+			<li>Cai, Long; Friedman, Nir; Xie, X. Sunney; &quot;Stochastic protein expression in individual cells at the single molecule level,&quot; <em>Nature</em>, 440, 358-362 (2006).</li>
+			<li>Friedman, Nir; Cai, Long; Xie, X. Sunney &quot;Linking stochastic dynamics to population distribution: An analytical framework of gene expression,&quot;<em>Phys. Rev. Lett.</em>97, 168302 (2006).</li>
+		</ol>
+
+		<hr>
+		<p><a name="transcription_factor_dynamics"></a></p>
+		<p><h3 id="transcription_factor_dynamics">Transcription Factor Dynamics</h3></p>
+		<p>In all kingdoms of life, transcription factors (TFs) regulate gene expression by site specific binding to chromosomal DNA, preventing or promoting the transcription by RNA polymerase. The lac operon of <em>Esche</em><em>richia coli</em>, a model system for understanding TF-mediated transcriptional control, has been the subject of extensive biochemical, structural, and theoretical studies since the seminal work by Jacob and Monod. However, direct observation of TF mediated gene regulation remains difficult, because TFs exist in small numbers and require single molecule sensitivity. We made the first real-time observation of specific binding of a lac repressor, labeled with a fluorescent protein, to a chromosomal lac operator. We measured the kinetics of binding and dissociation of the repressor in response to metabolic signals [1].</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/FactorDynamics1.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 1</strong> Lac repressor kinetics in living E. coli cells. (A) Bacteria before and 40 s after addition of IPTG to a final concentration of 1 mM. (B) Fraction of the lac operator regions that is TF-bound is plotted as a function of time after induction by various concentrations of IPTG. (C) Bacteria before and 1 min after dilution of IPTG from 100 to 2 mM. (D) Fraction of the operator regions that is TF-bound as a function of time after rapid dilution of transcription factors from 100 to 2 mM. The data are fitted with an exponentially distributed binding time and yield a time constant of 60 s. </p>
+		</blockquote>
+		<p>A central question in molecular biology is how a TF molecule or any DNA binding protein searches for specific binding sites on DNA. Target location by TFs is believed to be achieved by facilitated diffusion, in which a TF searches for specific binding sites through a combination of 1D diffusion along a short DNA segment and 3D translocation among DNA segments through cytoplasm [2]. However, direct observation in living cells has not been possible. </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/FactorDynamics2.jpg"></div>
+		<blockquote>
+			<p><strong>Fig. 2 </strong>Facilitated diffusion, a combined 1D and 3D search</p>
+		</blockquote>
+		<p>We carried out a live cell study of the search process [1]. Specifically, we characterized the nonspecific binding to DNA, 1D diffusion along DNA segments, and 3D translocation among segments through cytoplasm. We found that in searching for the operator, a lac repressor spends ~90% of time nonspecifically bound to and diffusing along DNA with a residence time of &lt;5 milliseconds. This gives the first quantitative measurement of how individual DNA binding proteins search for their target sequences in a living cell.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Elf J, Li GW &amp;Xie XS (2007) Probing transcription factor dynamics at the single-molecule level in a living cell. <em>Science </em>.316 :1191-4</li>
+			<li>Berg, O.G.; Winter, R.B; von Hippel, P.H. &ldquo;Diffusion-Driven Mechanisms of Protein Translocation on Nucleic Acids. 1. Models and Theory?&rdquo; Biochemistry 20, 6929 (1981).</li>
+		</ol>
+
+		<hr>
+		<p><a name="stochastic_event_cell_phenotype"></a></p>
+		<p><h3 id="stochastic_event_cell_phenotype">A Single-Molecule Stochastic Event Determines a Cell's Phenotype</h3></p>
+		<p>Genetically identical cells in the same environment can exhibit different phenotypes, and a single cell can switch between distinct phenotypes in a stochastic manner. In the classic example of lactose metabolism in E. coli, the lac genes are fully expressed for every cell in a population under high extracellular concentrations of inducers, such as the lactose analog TMG. However, at moderate inducer concentrations, the lac genes are highly expressed in only a fraction of a population, which may confer a fitness advantage for the entire population. Thanks to recent advances on single-molecule imaging, the detailed molecular mechanism that controls the stochastic phenotype switching of a single cell has been revealed.</p>
+		<p>Lactose metabolism is controlled by the <em>lac</em> operon, which consists of three genes including lactose permease. Expression of the operon is regulated by the lactose repressor, which dissociates from its specific binding sequences of DNA, the <em>lac</em> operators, in the presence of inducers to allow transcription. The production of the permease increases inducer influx, resulting in positive feedback on expression of the <em>lac</em> operon. When the permease is labeled with a yellow fluorescent protein, two different phenotypes are observed in an isogenic population of cells with the fluorescence intensity histogram of the cells exhibiting a bimodal distribution (Fig. 1A &amp; 1B). Interestingly, the low fluorescence cells have a few individual permease molecules, suggesting that one permease molecule is not enough to induce the transition from the low to high fluorescence phenotype. It was determined that 200-300 permease molecules, corresponding to a big burst of gene expression, are needed for this transition.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/TFDynamics3.jpg" /></div>
+		<blockquote>
+			<p>A) In the presence of moderate amounts of inducer (lactose analog TMG), a strain expressing lactose permease fused to yellow fluorescent protein (LacY-YFP) exhibits two phenotypes, all-or-none fluorescence in a fluorescence-phase contrast overlay image. Fluorescence imaging with high sensitivity reveals single molecules of LacY-YFP in the uninduced cells. B) Bimodal fluorescence distributions show that a fraction of the population exists either in an uninduced or induced state, with the relative fractions depending on the inducer concentration. C) A time-lapse sequence captures a phenotype-switching event. One cell switches phenotype to express many LacY-YFP molecules (yellow fluorescence overlay) whereas the other daughter cell does not.</p>
+		</blockquote>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/lacy_animated.gif" width="300"/></div>
+		<blockquote>
+			<p>This time-lapse movie shows fluorescence overlay (yellow) on phase contrast images of a cell dividing into two genetically identical daughter cells. One daughter cell changes into a phenotype with very high fluorescence, while the other daughter cell does not. This change in phenotype is the result of the stochastic, full dissociation of the tetrameric repressor from all of its binding sites.</p>
+		</blockquote>
+		<p>The tetrameric lactose repressor can simultaneously bind to two operators to form a DNA loop. Under low inducer concentrations, the repressor cannot be pulled off the DNA by the inducer; rather, spontaneous, partial dissociations of the repressor result in transcription of one mRNA and a small burst of proteins. However, infrequent events of complete dissociation of the repressor result in large bursts of permease expression (200-300 copies) that trigger induction of the <em>lac </em>operon. This change in phenotype is the result of the stochastic, full dissociation of the tetrameric repressor from all of its binding sites. The time-lapse sequence (Fig.1C) captures such a pheotype&ndash;switching event. This illustrates that a stochastic single-molecular event of the complete dissociation of the tetrameric repressor determines a cell's phenotype, and that a DNA loop is a crucial in maintaining phenotype stability. This is a clear example that a rare event of a single molecule can have significant biological consequences.</p>
+		<p><h5 class="subheader">Reference:</h5></p>
+		<ol>
+			<li>Choi Paul, Cai Long, Frieda Kirsten, Xie Xiaoliang Sunney(2008). A stochastic single-molecule event triggers phenotype switching of a bacterial cell. <em>Science</em> 322:442-446.</li>
+		</ol>
+
+		<hr>
+		<p><a name="single_cell_proteomics_and_transcriptomics"></a></p>
+		<p><h3 id="single_cell_proteomics_and_transcriptomics">Single Cell Proteomic and Transcriptomic Analysis with Single Molecule Sensitivity</h3></p>
+		<p><h5 class="subheader">Quantifying <em>E. coli</em> Proteome and Transcriptome with Single-Molecule Sensitivity in Single Cells</h5></p>
+		<p>Gene expression is often stochastic, because gene regulation takes place at a single DNA locus within a cell.&nbsp;Thus, protein and messenger RNA (mRNA) copy numbers vary from cell to cell in isogenic bacterial populations. However, these molecules often exist in low copy numbers and are difficult to detect in single cells, making single molecule detection important. </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/ProteomicAndTranscriptomic.jpg" /></div>
+		<blockquote>
+			<p><strong>Figure 1</strong>: (A) A poly(dimethylsiloxane) (PDMS) microfluidic chip is used for imaging 96 library strains. E. coli cells of each strain are injected into separate lanes and immobilized on a polylysine-coated coverslip for automated fluorescence imaging with single-molecule sensitivity. (B) A representative fluorescence image overlaid on phase-contrast image of a library strain, in which Adk is tagged with YFP, with respective single-cell&ndash;protein level histogram that are fit to gamma distributions with parameters a and b. The cytoplasmic protein Adk is uniformly distributed intracellularly.</p>
+		</blockquote>
+		<p>To profile global variation at all expression levels, we constructed an E. coli yellow fluorescent protein (YFP) fusion library that includes more than 1,000 genes (1). To facilitate high throughput analyses of the YFP library strains, we implemented an automated imaging platform based on a microfluidic device that holds 96 independent library strains attached to a polylysine-coated coverslip (Figure 1A). Imaging was performed with a single-molecule fluorescence microscope. The 1000 genes had expression levels ranging from 0.1 to 10,000 proteins per cell. About 50% of the proteins are expressed at an average level of fewer than ten molecules per cell. </p>
+		<p>Of all the tagged proteins, approximately 99% of the copy-number distributions are well fit with the gamma distribution, which is described with two fitting parameters a and b (Figure 1B) (2). At low expression levels, a and b have clear physical interpretations as the transcription rate and protein burst size respectively. At high expression levels, the distributions are dominated by extrinsic noise. </p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/ProteomicAndTranscriptomic_2nd.jpg" /></div>
+		<blockquote>
+			<p><strong>Figure 2</strong>: (A) (Left) Protein and (Right) mRNA from the TufA-YFP strain, in which TufA is tagged with YFP, are detected simultaneously in the same fixed cells. (B) (Top) mRNA and (Right) protein levels. Protein versus mRNA copy number plot for the TufA-YFP strain. Each point represents a single cell of the strain. The correlation coefficient is r = 0.01 +/-0.03 (mean +/- SD, n = 5447).</p>
+		</blockquote>
+		<p>The simultaneous profiling of mRNA and protein revealed that the mRNA and protein copy numbers of a single cell for any given gene are uncorrelated (Figure 2); that is, a cell that has more mRNA molecules than average does not necessarily have more proteins. This perhaps counter-intuitive result can be explained by the fact that mRNA has a much shorter lifetime than protein in bacteria. A mammalian cell, by contrast, has comparable mRNA and protein lifetimes, and hence is expected to have more correlated mRNA and protein levels than a bacterial cell. Taken together, a quantitative and integral account of a single-cell gene expression profile is emerging.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Taniguchi, Y., Choi, P.J., Li, G.-W., Chen, H., Babu, M., Hearn, J., Emili, A., Xie, X.S. (2010), &quot;Quantifying <em>E. coli</em> Proteome and Transcriptome with Single-Molecule Sensitivity in Single Cells&quot;, <em>Science</em> 329: 533-538 </li>
+			<li>Friedman, N., Cai, L., Xie, X.S. (2006), &quot;Linking Stochastic Dynamics to Population Distribution: An Analytical Framework of Gene Expression&quot;, <em>Phys. Rev. Lett.</em> 97: 168302</li>
+		</ol>
+
+		<hr>
+		<p><a name="single_molecule_imaging_nucleus"></a></p>
+		<p><h3 id="single_molecule_imaging_nucleus">Single-Molecule Imaging inside a Live Mammalian Cell Nucleus</h3></p>
+		<p>Tracking single molecules in living cells provides a direct way to probe the kinetics of their interactions with other cellular components, and is particularly useful to characterize unsynchronized dynamic events. Despite previous successes in single-molecule imaging in live bacterial cells, imaging single fluorescent proteins remains challenging in the nuclei of living mammalian cells, due to their larger size and higher fluorescence background. We developed a novel fluorescence microscopy technique that combines selective plane illumination with a vertical arrangement of illumination and detection objectives. In this new geometry (Fig. 1), a disposable mirror reflects the light sheet into a horizontal plane close to the sample surface, thus allowing horizontal sectioning of the cells and achieving single fluorescent protein imaging in live mammalian cells. We name this technique reflected light sheet microscopy (RLSM).</p>
+		<p>Our technique possesses the advantage of superior signal-to-background ratio, fast image acquisition speed and millisecond time resolution, low photobleaching rate and reduced phototoxicity, as well as easy optical sectioning capability. The reflected light sheet configuration also allows individual, normal-sized adherent cells to be imaged, as compared to other selective plane illumination methods that could only be applied to embryos or cellular spheroids much larger in size. Lastly, the single-molecule tracking capability of RLSM allows us to directly monitor in vivo protein dynamics without the need for additional calibrations or corrections that are commonly associated with other techniques such as FRAP and FCS.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/live_cell_nucleus_1.jpg" /></div>
+		<blockquote>
+			<p><b>Fig. 1. Visualization of single fluorescent protein molecules in a mammalian nucleus by RLSM. (a)</b> Scheme of the reflected light-sheet principle (not drawn to scale). A laser beam is focused by an objective to form a vertical light sheet that is reflected by 90&deg; off an AFM cantilever next to a cell in a petri dish. Fluorescence is detected by a second high-NA objective. Three-dimensional optical sectioning is achieved through vertical displacement of the sample. <b>(b)</b> A MCF-7 cell expressing mEos2-NFY-A is activated with 405 nm and imaged with 560 nm under epi illumination (left) and RLSM (right), demonstrating the drastic improvement in SBR achievable by RLSM.</p>
+		</blockquote>
+		<p>We demonstrate the potential of our new microscopy method by directly monitoring the binding properties of fluorescently labeled glucocorticoid receptors (GR) to DNA (Fig. 2a and b). GR is a transcription factor that localizes mostly to the cytoplasm in the absence of hormone, but forms homodimers and translocates into the nucleus upon binding to hormone. Previous studies have shown that dimeric GR binds directly to DNA at regulatory sequences, while the monomer can be indirectly recruited to DNA by other DNA-bound protein complexes. The mode of DNA interaction defines whether the target gene is activated or repressed. Using RLSM, we measured the DNA-bound fraction of GR and determined the residence times on DNA of the various oligomerization states of GR, thereby permitting us to resolve the transcription factor's different modes of DNA binding. We also demonstrated the capability of RLSM for two-color single-molecule imaging (Fig. 2c) by directly observing the spatio-temporal co-localization of GR and its coactivator GRIP1. The imaging technique we have developed could be generally applied to study the dynamics of a variety of key biomolecular players inside the living mammalian nucleus.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/live_cell_nucleus_2.jpg" /></div>
+		<blockquote>
+			<p><b>Fig. 2. Characterizing mammalian transcription factor dynamics in vivo with RLSM. (a)</b> Single-molecule tracking of a fast-diffusing mEos2-GR molecule (top) and of a DNA-bound molecule (bottom) in presence of 100 nM dexamethasone at 10-ms time resolution. Far right, identified traces. <b>(b)</b> Cumulative distribution of squared displacements of mEos2-histone H4 (H4) and mEos2-GR with (GRd) or without (GRu) 100 nM dexamethasone induction. Inset, fractions of molecules exhibiting slow effective diffusion (corresponding to DNA-bound fraction, dark blue) and of molecules exhibiting two fast effective diffusion components (light blue). <b>(c)</b> Two-color imaging of GR-GRIP1 colocalization. TagRFP-T-GR (blue trace) and EGFP-GRIP1 (orange trace) were alternately excited with 50-ms exposure time.</p>
+		</blockquote>
+		<p>In addition, we combined RLS illumination with super-resolution microscopy (SRM), and applied RLS-SRM to image the spatial organization of RNAP II molecules inside the mammalian nucleus, which has long been proposed to heterogeneously occur in discrete foci termed ‘transcription factories’ (Fig. 3A). Leveraging on the blinking photophysics of rhodamine-based dyes such as TMR, we also developed a density-based clustering algorithm that pools multiple localizations in super-resolution images based on their spatial and temporal proximity, so as to be able to accurately count the copy number of RNAP II molecules in transcription foci (Fig. 3B).</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/transc_fctry_fig3.png" /></div>
+		<blockquote>
+			<p><b>Fig. 3. 'Transcription factories' hypothesis and strategy for molecular counting. (A) </b>Models of spatial distribution of RNAP II in mammalian nucleus, in which transcription is carried out by either individual RNAP II molecules <i>(top)</i> or multiple molecules clustered into spatially discrete 'factories' <i>(bottom)</i> that pull together genes to be transcribed. <b>(B) </b>Flow chart of spatio-temporal clustering analysis based on spatial and temporal nearest neighbor distance (NND) thresholding of TMR blinking events, thus enabling accurate counting of RNAP II molecules in transcription foci.</p>
+		</blockquote>
+		<p>Using RLS-SRM, we quantified the global extent of RNAP II clustering inside the mammalian nucleus. We found that the majority (&lt; 70%) of the transcription foci originate from single RNAP II molecules, and no significant clustering between RNAP II molecules is detected within the length scale of the reported diameter of 'transcription factories' (Fig. 4). Colocalization measurements of RNAP II molecules equally labeled by two spectrally distinct dyes confirmed the primarily unclustered distribution, arguing against a prevalent existence of 'transcription factories' in the mammalian nucleus as previously proposed. Our study not only provides clear and convincing answers to this long-standing controversy, but also paves way for quantitative mapping and stoichiometric characterization of other biomolecular species deep inside mammalian cells.</p>
+		<div class="text-center"><img src="{{MEDIA_URL}}research/transc_fctry_fig4.png" /></div>
+		<blockquote>
+			<p><b>Fig. 4. Spatial organization of RNAP II molecules shows no significant clustering. (A) </b>Distribution of SNAP-RNAP II molecules in a thin optical section of the nucleus of a fixed U2OS cell labeled with TMR. Inset shows a zoomed-in area, where single transcription foci are discernible; yellow crosses indicate the centroid position of the st-clusters identified. Scale bar: 2 &mu;m; inset: 500 nm. <b>(B) </b>Distribution of the number of st-clusters in transcription foci indicates that at least 70% of the foci consist of only one RNAP II molecule (<i>n</i> = 4465). <b>(C) </b>Distribution of spatial NND for transcription foci shows that the majority of the RNAP II molecules do not associate with each other within the reported diameter of 'transcription factories' (40-130 nm). Dotted line indicates mean.</p>
+		</blockquote>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li> Gebhardt, J. Christof M.; Suter, David M.; Roy, Rahul; Zhao, Ziqing W.; Chapman, Alec R.; Basu, Srinjan; Maniatis, Tom; Xie, X. Sunney. &quot;<a href="{{MEDIA_URL}}research/nmeth.2411.pdf">Single-Molecule Imaging of Transcription Factor Binding to DNA in Live Mammalian Cells</a>,&quot; <em>Nat Methods</em> <strong>10</strong>, 421-426 DOI:10.1038/NMETH.2411 (2013)</li>
+			<li>Zhao, Ziqing W.; Roy, Rahul; Gebhardt, J. Christof M.; Suter, David M.; Chapman, Alec R.; Xie, X. Sunney. &quot;<a href="{{MEDIA_URL}}research/PNAS-2013-Zhao-1318496111.pdf">Spatial organization of RNA polymerase II inside a mammalian cell nucleus revealed by reflected light-sheet superresolution microscopy</a>,&quot; <em>PNAS</em> <strong>111</strong>, 681-686 DOI:10.1073/pnas.1318496111 (2014)</li>
+		</ol>
+
+		<hr>
+		<p><a name="singular_expression_of_olfactory_receptors"></a></p>
+		<p><h3 id="singular_expression_of_olfactory_receptors">Singular Expression of Olfactory Receptors</h3></p>
+		<p>In mammals, the sense of smell relies on their massive array of genes encoding olfactory receptors (ORs). ORs are G-protein-coupled receptors and constitute the largest gene family in mammalian genomes. For example, mice carry ~1,400 different OR genes, each sensing a different set of odors and together accounting for 6% of all genes in the mouse genome (Figure 1A).</p>
+		<p>For the olfactory system to function properly, the staggering number of OR genes must be expressed in an unusual pattern: Each sensory neuron randomly chooses one, and only one, OR gene for expression (Figure 1B). In neurobiology, a fascinating question is how this "singularity" can be achieved despite intrinsic stochasticity of gene expression.
+		<div class="text-center"><img src="{{MEDIA_URL}}research/OlfactionFig1.png"></div>
+		<blockquote>
+			<p><strong>Fig. 1. </strong>(A) Olfactory receptors (ORs) are the largest gene family in mammalian genomes. (B) The sense of smell relies on the "singular" expression of ORs: Each neuron chooses one, and only one, OR gene.</p>
+		</blockquote>
+		<p>Inspired by experimental observations from Stavros Lomvardas' group, we build a simple kinetic model of OR expression (Figure 2, top left). Initially, each OR gene is wrapped around histones that contain repressive methylation and is thus silenced (the "Off" state). Once any ORs are activated through histone demethylation (to the "On" state), their expression will induce a negative feedback that depletes the demethylase required for OR activation (Figure 2, bottom).
+		<p>We show theoretically that this scheme of activation and feedback can indeed generate OR singularity, if two timescales&#8212;slow activation (T, 5&#8211;10 days) and fast feedback (&Delta;t, 1&#8211;2 hours)&#8212;are well separated (Figure 2, bottom). In fact, the probability of failure&#8212;defined as expressing more than one OR&#8212;is proportional to the ratio &Delta;t/T (Figure 2, top right).
+		<div class="text-center"><img src="{{MEDIA_URL}}research/OlfactionFig2.png" ></div>
+		<blockquote>
+			<p><strong>Fig. 2. </strong>We build a simple kinetic model of olfactory receptors (ORs) consisting of slow activation by histone demethylation (time T) and fast feedback to deplete the demethylase (time &Delta;t). This scheme generates robust singularity as long as &Delta;t/T &lt;&lt; 1.</p>
+		</blockquote>
+		<p>Our work demonstrates a striking example of enzyme kinetics, in which the nervous system utilizes the relative timescales of slow epigenetic changes (histone demethylation) and fast transcriptional regulations (depletion of the demethylase) to generate a dramatic outcome in neurogenesis. Our conclusions are generally applicable to other systems where singularity is desired, such as V(D)J recombination in the immune system and the expression of protocadherins.</p>
+		<p><h5 class="subheader">References:</h5></p>
+		<ol>
+			<li>Lyons, David B; Allen, William E.; Goh, Tracie; Tsai, Lulu; Barnea, Gilad; Lomvardas, Stavros. &quot;<a href="http://www.cell.com/abstract/S0092-8674(13)00778-2">An epigenetic trap stabilizes singular olfactory receptor expression,</a>&quot; <em>Cell</em> <strong>154</strong>,325-336 DOI:10.1016/j.cell.2013.06.039 (2011)</li>
+			<li>Tan, Longzhi; Zong, Chenghang; Xie, X. Sunney. &quot;<a href="{{MEDIA_URL}}research/PNAS-2013-Tan-21148-52.pdf">Rare event of histone demethylation can initiate singular gene expression of olfactory receptors</a>&quot;, <em>PNAS</em> <strong>110</strong>,21148-21152 DOI: 10.1073/pnas.1321511111 (2013)</li>
+		</ol>
+
+	</div>
+{% endblock %}

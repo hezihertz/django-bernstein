@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="large-9 columns article-content" role="content">
+	{% if tag == "news_reports" %}
+	<h3>News Reports</h3>
+	{% elif tag == "group_news" %}
+	<h3>Group News</h3>
+	{% elif tag == "archives" %}
+	<h3>Archives</h3>
+	{% endif %}
+
+	<div class="article-content">
+	{% for n in news_items %}
+		<p>{{n.content|safe}} ({{n.month}}/{{n.year}})</p>
+	{% endfor %}
+	</div>
+</div>
+{% endblock %}

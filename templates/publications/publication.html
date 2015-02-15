@@ -1,0 +1,26 @@
+{% load publication_extras %}
+
+{% for author, author_escaped in publication.authors_escaped %}
+{{ author }}{% if not forloop.last %}{% if forloop.revcounter == 2 %}{% if not forloop.first %},{% endif %} and {% else %}, {% endif %}{% endif %}
+{% endfor %}<br />
+<b>
+{% if publication.pdf %}<a href="{{ MEDIA_URL }}{{ publication.pdf }}" class="title">{{ publication.title|tex_parse }}</a>
+{% else %}{{ publication.title|tex_parse }}
+{% endif %}
+</b><br/>
+{% if publication.journal %}
+	<i>{{ publication.journal }}</i>
+	{% if publication.volume %}<strong>{{publication.volume}}</strong>, {% endif %}
+	{% if publication.pages %}{{publication.pages}}, {% endif %}({{ publication.year }})
+	{% if publication.doi %} DOI:{{publication.doi}}{% endif %}
+	{% if publication.note %}<br />{{ publication.note|safe }},{% endif %}
+{% else %}
+	<i>{% if publication.book_title %}{{ publication.book_title }},{% endif %}
+	{% if publication.note %}{{ publication.note }},{% endif %}
+	{% if publication.publisher %}{{ publication.publisher }},{% endif %}
+	{% if publication.institution %}{{ publication.institution }},{% endif %}
+	{% if publication.pages %}pp {{publication.pages}}, {% endif %}
+	{{ publication.year }}{% if publication.isbn %},
+	ISBN {{ publication.isbn }}{% endif %}</i>
+	<br />
+{% endif %}

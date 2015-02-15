@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+<div class="large-9 columns article-content">
+<h3>Contact List</h3>
+{% if current_members %}
+	<table>
+		<tr>
+			<th width="200">Name</th>
+			<th width="400">Local Address</th>
+			<th width="150">Cell Number</th>
+			<th width="150">Home Number</th>
+		</tr>
+	{% for m in current_members %}
+		<tr>
+			<td>{{m.full_name}}</td>
+			<td>{{m.address}}</td>
+			<td>{{m.cell_number}}</td>
+			<td>{{m.home_number}}</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endif %}
+</div>
+{% endblock %}
+
+
